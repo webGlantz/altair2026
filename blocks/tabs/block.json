@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/tabs",
+	"title": "Image + Headline + Text + Tab",
+	"description": "A custom block with image and content in tabs.",
+	"category": "glantz-blocks",
+	"icon": "align-pull-left",
+	"keywords": ["content", "image", "call to action"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "tabs.php",
+		"postTypes": [
+			"page"
+		]
+	},
+	"style": ["tabs"],
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.1.0"
+}

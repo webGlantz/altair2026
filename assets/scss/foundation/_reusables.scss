@@ -1,0 +1,166 @@
+.container {
+	--spacing-x: var(--gutter-x);
+	--spacing-y: var(--gutter-y);
+
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: var(--spacing-x);
+	padding-left: var(--spacing-x);
+	max-width: 1440px;
+	width: 100%;
+
+	// &--xxs { max-width: 600px; }
+	&--xs { max-width: 880px; }
+	&--sm { max-width: 980px; }
+	&--md { max-width: 1216px; }
+
+	.single-post__container & { 
+		--spacing-x: 0;
+	}
+}
+
+.component {
+	
+	margin-top: var(--gutter-y);
+	margin-bottom: var(--gutter-y);
+
+	&.bg-navy,
+	&.bg-midnight {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: var(--gutter-y);
+		padding-bottom: var(--gutter-y);
+	}
+
+	.single-post__container & {
+		--gutter-y: 96px;
+
+		&:first-child { margin-top: 0; }
+	}
+
+	@media (max-width: #{$screen_lg - 1}) {
+		&.bg-navy,
+		&.bg-midnight {
+			--gutter-y: 60px;
+		}
+	}
+}
+
+.btn-group {
+	display: flex;
+	flex-direction: column;
+	
+	gap: 24px;
+
+	@media (min-width: $screen_lg) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-end;
+	}
+}
+
+.btn {
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding-bottom: 1em;
+	line-height: 1.5;
+	font-size: 16px;
+	font-weight: 600;
+
+	&:before {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		background: currentColor;
+		content: '';
+		transition: all var(--time);
+	}
+
+	&:hover,
+	.group:hover & {
+		&:before { height: 7px; }
+	}
+
+	@media (min-width: $screen_lg) {
+		font-size: 18px;
+	}
+}
+
+
+
+.logo {
+	display: block;
+	img { width: 100%; max-width: none; }
+}
+
+.search-form {
+
+	input:not([type="checkbox"]):not([type="radio"]):not(.bw-datepicker__input) {
+		padding-left: 12px;
+		padding-right: 24px;
+		height: 40px;
+		background: var(--slate-blue);
+		border-radius: 0;
+		border: 1px solid currentColor;
+	}
+
+	button {
+		margin-left: -1px;
+		border-color: var(--midnight);
+	}	
+}
+
+.search-results {
+	hr {
+		margin: 0;
+		border: 0;
+		height: 1px;
+		background: currentColor;
+	}
+}
+
+.zoom-hover {
+	overflow: hidden;
+
+	img {
+		transition: all var(--time);
+	}
+
+	&:hover img,
+	.group:hover & img {
+		transform: scale(1.1);
+	}
+}
+
+.select-ui {
+	position: relative;
+	z-index: 1;
+	
+
+	select { 
+		appearance: none;
+		padding: 12px 24px 12px 6px;
+		border: 0;
+		border-bottom: 1px solid currentColor;
+		border-radius: 0;
+	}
+
+	i {
+		position: absolute;
+		top: 50%;
+		right: 6px;
+		pointer-events: none;
+		transform: translateY(-50%);
+		color: currentColor;
+	}
+}
+
+.contact-item {
+	i { margin-top: 0.15em; }
+}

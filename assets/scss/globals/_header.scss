@@ -1,0 +1,135 @@
+.h {
+	z-index: 10;
+}
+
+.h_logo {
+	width: 120px;
+	transition: all var(--time);
+
+	@media (min-width: $screen_lg) {
+		width: 150px;
+	}
+}
+
+.h_nav {
+	position: absolute;
+  	top: 100%;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	overflow: scroll;
+	margin-top: 1px;
+	padding: 24px var(--gutter-x);
+	height: calc(100dvh - var(--wp-admin--admin-bar--height, 0px) - var(--header-height, 0px));
+	background: var(--white);
+  	opacity: 0;
+  	visibility: hidden;
+  	transition: all var(--time);
+
+  	&.is-active {
+  		opacity: 1;
+  		visibility: visible;
+  	}
+
+  	&__ul {
+
+  	}
+
+  	@media (min-width: $screen_lg) {
+  		position: static;
+  		z-index: 0;
+  		overflow: visible;
+  		padding: 0;
+  		height: auto;
+  		opacity: 1;
+  		visibility: visible;
+  		background: transparent;
+  	}
+}
+
+.h_utility {
+	padding-bottom: 20px;
+	border-bottom: 1px solid var(--midnight);
+
+	@media (min-width: $screen_lg) {
+		padding-bottom: 0;
+		border: 0;
+		font-size: 14px;
+	}
+}
+
+.h_primary {
+	&__i {
+		padding: 15px 0; 
+		border-bottom: 1px solid var(--midnight);
+	}
+
+	@media (min-width: $screen_lg) {
+		&__i {
+			padding: 0;
+			border: 0;
+		}
+	}
+}
+
+.h_subnav {
+
+	display: grid;
+	margin-top: 15px;
+	padding-left: 20px;
+	gap: 15px;
+
+	&__toggle {
+		display: flex; 
+		gap: 8px; 
+		align-items: center;
+	}
+
+	&__toggle i { transition: all var(--time); }
+
+	&__toggle.is-active i { transform: rotate(180deg); }
+
+	@media (min-width: $screen_lg) {
+		position: absolute;
+		padding: 24px;
+		background: white;  
+	}
+
+}
+
+.h_menu-toggle {
+	margin-left: 24px;
+	width: 29px;
+	height: 20px;
+	transition: none;
+
+	&:before,
+	&:after,
+	span {
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: currentColor;
+		border-radius: 2px;
+		content: '';
+		transition: all var(--time);
+	}
+
+	&.is-active {
+		&:before { transform: translateX(5.5px) translateY(-1.25px) rotate(45deg); transform-origin: top left; }
+		&:after { transform: translateX(5.5px) translateY(1.25px) rotate(-45deg); transform-origin: bottom left; }
+		span { opacity: 0; }
+	}
+}
+
+.h_search {
+	@media (min-width: $screen_lg) {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		margin-top: 1px;
+		padding: 24px 0;
+		background: var(--white);
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/form",
+	"title": "Contact Form + Sidebar",
+	"description": "A custom block with a form embed and sidebar.",
+	"category": "glantz-blocks",
+	"icon": "email-alt2",
+	"keywords": ["form"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "contact-form-sidebar.php",
+		"postTypes": [
+			"page",
+			"service",
+			"area"
+		]
+	},
+	"style": [ "contact-form-sidebar"],
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.0.0"
+}

@@ -1,0 +1,202 @@
+#app .gform-theme--framework {
+
+	--gf-local-font-size: 18px;
+
+	.gform_fields { row-gap: 48px; column-gap: 24px; }
+
+	.gform_submission_error.hide_summary,
+	.gform_validation_errors,
+	.gform_required_legend { display: none!important; }
+
+	.gform-field-label:where(:not([class*="gform-field-label--type-"]):not(.gfield_header_item):not(.ginput_quantity_label)) {
+		--gf-label-req-gap: 0;
+	}
+
+	.gfield_list_group_item::before, 
+	.gform-field-label:where(:not([class*="gform-field-label--type-"])) {
+  		--gf-local-margin-y: 0 5px;
+  	}
+
+	.gfield_label,
+	.gfield_label_product,
+	.gform-field-label > .gfield_required {
+		@extend .t_h6;
+		display: flex;
+		align-items: flex-start;
+		color: var(--midnight);
+	}
+
+	.gfield_label { 
+		margin-bottom: 24px;
+		padding-left: 12px; 
+	}
+
+	.gform-field-label > .gfield_required {
+		margin-top: -0.2em;
+		color: var(--wood-beam);
+	}
+
+	// .gform-field-label--type-sub,
+	// .gfield_description {
+	// 	font-weight: 700;
+	// 	color: var(--color_magenta);
+	// }
+
+	.gfield_validation_message:not(:empty) {
+		font-weight: bold;
+		font-size: 16px;
+		color: var(--error);
+	}
+
+	.gfield--type-mailchimp { display: none; }
+
+	// .gf_progressbar_percentage { background-color: var(--color_magenta)!important; }
+
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="datetime"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	input[type="file"],
+	select,
+	textarea {
+		padding: 0 12px 6px 12px;
+		width: 100%;
+		background: transparent;
+		border-radius: 0;
+		border: 0;
+		border-bottom: 1px solid currentColor;
+		border-left: 1px solid currentColor;
+		box-shadow: none;
+		font-size: 16px!important;
+		color: var(--midnight);
+
+		&:focus {
+			padding: 0 9px 3px 9px;
+			outline: 0;
+			box-shadow: none;
+			border-width: 3px;
+		}
+
+		&[aria-invalid=true] {
+			border-color: var(--error);
+		}
+	}
+
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="datetime"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	input[type="file"],
+	select {
+		height: auto;
+	}
+
+
+
+	.ginput_container {
+		position: relative;
+
+		// &:after {
+		// 	position: absolute;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	left: 0;
+		// 	height: 20px;
+		// 	border-bottom: 1px solid var(--midnight);
+		// 	border-left: 1px solid var(--midnight);
+		// 	content: '';
+		// 	pointer-events: none;
+		// }
+
+		// &:focus:after {
+		// 	border-width: 3px;
+		// }
+	}
+
+	// .ginput_container_select {
+	// 	position: relative;
+
+	// 	select {
+	// 		padding: 5px 15px 7px;
+	// 	}
+
+	// 	&:after {
+	// 		position: absolute;
+	// 		right: 10px;
+	// 		bottom: 12px;
+	// 		font-family: 'Font Awesome 6 Free';
+	// 		font-weight: 900;
+	// 		content: '\f078';
+	// 		color: var(--color_blue);
+	// 	}
+	// }
+
+	// .gsection_title { color: var(--color_purple); }
+
+	// input[type="radio"]:before { background: var(--color_blue); }
+	// input[type="checkbox"]:before { color: var(--color_blue); }
+
+
+
+	// .gfield_list_icons button,
+	// input[type="radio"],
+	// input[type="checkbox"] {
+	// 	&:focus {
+	// 		border-color: var(--color_blue);
+	// 		box-shadow: 0 0 0 var(--gf-ctrl-shadow-offset-size-focus) rgba(#2D2F8D, 0.25),0 0 0 var(--gf-ctrl-shadow-size-focus) rgba(#2D2F8D, 0.25);
+	// 	}
+	// }
+
+	// input[type="radio"],
+	// input[type="checkbox"] {
+	// 	background: var(--color_warm-white);
+	// }
+
+	// .gfield_list_icons button { 
+	// 	background: var(--color_blue); 
+	// }
+
+	// .gform-loader {
+	// 	border-color: var(--color_magenta);
+	// }
+
+	// .gfield--type-section {
+	// 	border: 0;
+	// 	padding: 0;
+	// }
+
+	.gform_confirmation_message {
+		@extend .t_h4;
+	}
+
+	.gform_button,
+	.button,
+	.gform-theme-button {
+		@extend .btn;
+
+		margin-bottom: 0;
+		margin-left: auto;
+		box-shadow: none;
+		border-radius: 0;
+	}
+}

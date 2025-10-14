@@ -1,0 +1,45 @@
+$colors: (
+	'white': #fff,
+	'off-white': #FEFAF4,
+	'black': #000,
+	
+	'blue-lightest': #EFF4FF,
+	'blue-light': #BAC7D8,
+	'blue': #2E446D,
+	'blue-dark': #122866,
+
+	'green': #6D7668,
+
+	'rust': #975831,
+
+	'brown': #472A1C,
+
+	'error': 'red',
+);
+
+$fonts: (
+	'ivypresto': '"ivypresto-display", serif', 
+	'articulat': '"articulat-cf", sans-serif',
+);
+
+$screen_md: 768px;
+$screen_lg: 1024px;
+$screen_xl: 1280px;
+$screen_xxl: 1440px;
+$screen_xxxl: 1920px;
+
+
+$sizing: (
+	0,
+	8,
+	12,
+	20,
+	24,
+	36,
+	48,
+	60,
+	72,
+	84,
+	96,
+	120,
+);

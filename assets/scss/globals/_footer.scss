@@ -1,0 +1,97 @@
+.f {
+	&_logo {
+		width: 150px; 
+	}
+
+	#app & .gform-theme--framework {
+		input[type="color"],
+		input[type="date"],
+		input[type="datetime-local"],
+		input[type="datetime"],
+		input[type="email"],
+		input[type="month"],
+		input[type="number"],
+		input[type="password"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="text"],
+		input[type="time"],
+		input[type="url"],
+		input[type="week"],
+		input[type="file"],
+		select,
+		textarea {
+			padding-left: 12px!important;
+			padding-right: 24px!important;
+			height: 40px;
+			border: 0;
+			border-bottom: 1px solid currentColor;
+			color: var(--white);
+
+			&:focus {
+				border-width: 1px;
+				outline: auto;
+			}
+		}
+
+		form {
+			position: relative;
+			margin-top: 12px;
+		}
+
+		.gfield_label { @extend .sr-only; }
+
+		.gform_footer {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin-top: 0;
+		}
+
+		.gform_button {
+			padding: 0 12px;
+			width: 44px;
+			height: 40px;
+			font-size: 0;
+
+			&:after {
+				margin-left: -0.4em;
+				font-family: "Font Awesome 6 Pro"!important;
+				font-weight: 300;
+				font-size: 16px;
+				content: '\e09f';
+				transition: all var(--time);
+			}
+
+			&:hover,
+			.group:hover & {
+
+				&:after { transform: rotate(45deg); color: var(--midnight)!important; }
+			}
+		}
+	}
+
+
+	@media (min-width: $screen_lg) {
+		&_logo {
+			width: 200px; 
+		}
+
+		&_right {
+			margin-top: -36px;
+			column-count: 2;
+			gap: 0;
+
+			&__i {
+				break-inside: avoid;
+				padding-top: 36px; 
+			}
+		}
+	}
+
+	@media (min-width: $screen_xl) {
+		&_right {
+			column-count: 3;
+		}
+	}
+}

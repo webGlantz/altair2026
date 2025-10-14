@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/text-image-cta",
+	"title": "Text + Image + CTA",
+	"description": "A custom block with image and content.",
+	"category": "glantz-blocks",
+	"icon": "align-pull-left",
+	"keywords": ["alternating", "content", "image", "call to action"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "text-image-cta.php",
+		"postTypes": [
+			"page"
+		]
+	},
+	"style": ["text-image-cta"],
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.1.0"
+}

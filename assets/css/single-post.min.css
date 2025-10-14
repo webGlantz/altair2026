@@ -1,0 +1,1 @@
+.toc{margin-top:-150px}.toc__link.is-active span:last-child{color:var(--safety-yellow);text-decoration:underline}@media (min-width: 1024px){.toc{position:sticky;top:calc(24px + var(--wp-admin--admin-bar--height, 0px));order:9999;margin-top:-240px}}

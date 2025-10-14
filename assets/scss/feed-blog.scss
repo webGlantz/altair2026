@@ -1,0 +1,19 @@
+@import '../../assets/scss/foundation/_variables.scss';
+
+.loop-post {
+
+
+	&:nth-child(9n) &__content,
+	&:nth-child(9n-5) &__content,
+	&:nth-child(9n-7) &__content { background: var(--rust); }
+
+
+	&:nth-child(9n-1) &__content,
+	&:nth-child(9n-3) &__content,
+	&:nth-child(9n-8) &__content { background: var(--blue); }
+
+
+	&:nth-child(9n-2) &__content,
+	&:nth-child(9n-4) &__content,
+	&:nth-child(9n-6) &__content { background: var(--green); }
+}

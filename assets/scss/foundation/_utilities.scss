@@ -1,0 +1,450 @@
+//-----------------------
+// LAYOUT
+//-----------------------
+.absolute { position: absolute; }
+.bottom-0 { bottom: 0; }
+.inset-0 { inset: 0; }
+.left-0 { left: 0; }
+.object-contain { object-fit: contain; }
+.object-cover { object-fit: cover; }
+.overflow-hidden { overflow: hidden; }
+.relative { position: relative; }
+.right-0 { right: 0; }
+.right-0 { right: 0; }
+.sticky { position: sticky; }
+.top-0 { top: 0; }
+.top-full { top: 100%; }
+
+@media (min-width: $screen_lg) {
+	.lg\:relative { position: relative; }
+	.lg\:static { position: static; }
+}
+
+
+//-----------------------
+// DISPLAY
+//-----------------------
+
+.block { display: block; }
+.flex { display: flex; }
+.grid { display: grid; }
+.hidden { display: none; }
+.inline-flex { display: inline-flex; }
+
+.-z-1 { z-index: -1; }
+.z-1 { z-index: 1; }
+.z-2 { z-index: 2; }
+
+@media (min-width: $screen_lg) {
+	.lg\:block { display: block; }
+	.lg\:flex { display: flex; }
+	.lg\:grid { display: grid; }
+	.lg\:hidden { display: none; }
+}
+
+@media (min-width: $screen_xl) {
+	.xl\:block { display: block; }
+	.xl\:flex { display: flex; }
+	.xl\:hidden { display: none; }
+}
+
+
+//-----------------------
+// COLUMNS
+//-----------------------
+.layout-grid { 
+	--cols: 4;
+	display: grid; 
+	column-gap: 24px;
+	grid-template-columns: repeat(var(--cols), 1fr);
+
+	@media (min-width: $screen_lg) {
+		--cols: 12;
+	}
+}
+
+.subgrid { grid-template-columns: subgrid; }
+
+.col-1 { grid-column-end: span 1; }
+.col-2 { grid-column-end: span 2; }
+.col-3 { grid-column-end: span 3; }
+.col-4 { grid-column-end: span 4; }
+
+.start-col-1 { grid-column-start: 1; }
+.start-col-2 { grid-column-start: 2; }
+.start-col-3 { grid-column-start: 3; }
+.start-col-4 { grid-column-start: 4; }
+
+@media (min-width: $screen_lg) {
+	.lg\:col-1 { grid-column-end: span 1; }
+	.lg\:col-2 { grid-column-end: span 2; }
+	.lg\:col-3 { grid-column-end: span 3; }
+	.lg\:col-4 { grid-column-end: span 4; }
+
+	.lg\:col-5 { grid-column-end: span 5; }
+	.lg\:col-6 { grid-column-end: span 6; }
+	.lg\:col-7 { grid-column-end: span 7; }
+	.lg\:col-8 { grid-column-end: span 8; }
+
+	.lg\:col-9 { grid-column-end: span 9; }
+	.lg\:col-10 { grid-column-end: span 10; }
+	.lg\:col-11 { grid-column-end: span 11; }
+	.lg\:col-12 { grid-column-end: span 12; }
+
+	.lg\:start-col-1 { grid-column-start: 1; }
+	.lg\:start-col-2 { grid-column-start: 2; }
+	.lg\:start-col-3 { grid-column-start: 3; }
+	.lg\:start-col-4 { grid-column-start: 4; }
+
+	.lg\:start-col-5 { grid-column-start: 5; }
+	.lg\:start-col-6 { grid-column-start: 6; }
+	.lg\:start-col-7 { grid-column-start: 7; }
+	.lg\:start-col-8 { grid-column-start: 8; }
+
+	.lg\:start-col-9 { grid-column-start: 9; }
+	.lg\:start-col-10 { grid-column-start: 10; }
+	.lg\:start-col-11 { grid-column-start: 11; }
+	.lg\:start-col-12 { grid-column-start: 12; }
+}
+
+@media (min-width: $screen_xl) {
+	.xl\:col-1 { grid-column-end: span 1; }
+	.xl\:col-2 { grid-column-end: span 2; }
+	.xl\:col-3 { grid-column-end: span 3; }
+	.xl\:col-4 { grid-column-end: span 4; }
+
+	.xl\:col-5 { grid-column-end: span 5; }
+	.xl\:col-6 { grid-column-end: span 6; }
+	.xl\:col-7 { grid-column-end: span 7; }
+	.xl\:col-8 { grid-column-end: span 8; }
+
+	.xl\:col-9 { grid-column-end: span 9; }
+	.xl\:col-10 { grid-column-end: span 10; }
+	.xl\:col-11 { grid-column-end: span 11; }
+	.xl\:col-12 { grid-column-end: span 12; }
+
+	.xl\:start-col-1 { grid-column-start: 1; }
+	.xl\:start-col-2 { grid-column-start: 2; }
+	.xl\:start-col-3 { grid-column-start: 3; }
+	.xl\:start-col-4 { grid-column-start: 4; }
+
+	.xl\:start-col-5 { grid-column-start: 5; }
+	.xl\:start-col-6 { grid-column-start: 6; }
+	.xl\:start-col-7 { grid-column-start: 7; }
+	.xl\:start-col-8 { grid-column-start: 8; }
+
+	.xl\:start-col-9 { grid-column-start: 9; }
+	.xl\:start-col-10 { grid-column-start: 10; }
+	.xl\:start-col-11 { grid-column-start: 11; }
+	.xl\:start-col-12 { grid-column-start: 12; }
+}
+
+//-----------------------
+// FLEXBOX & GRID 
+//-----------------------
+.flex-auto { flex: auto; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.items-end { align-items: flex-end; }
+.items-start { align-items: flex-start; }
+.items-stretch { align-items: stretch; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.justify-end { justify-content: flex-end; }
+.justify-start { justify-content: flex-start; }
+.self-center { align-self: center; }
+.self-end { align-self: flex-end; }
+.self-start { align-self: flex-start; }
+.self-stretch { align-self: stretch; }
+
+@each $size in $sizing {
+	.gap-#{$size} { gap: #{$size}px; }
+	.gap-x-#{$size} { column-gap: #{$size}px; }
+	.gap-y-#{$size} { row-gap: #{$size}px; }
+}
+
+@media (min-width: $screen_lg) {
+	.lg\:flex-row { flex-direction: row; }
+	.lg\:order-first { order: -1; }
+	.lg\:order-last { order: 999; }
+	.lg\:justify-between { justify-content: space-between; }
+	
+	@each $size in $sizing {
+		.lg\:gap-#{$size} { gap: #{$size}px; }
+		.lg\:gap-x-#{$size} { column-gap: #{$size}px; }
+		.lg\:gap-y-#{$size} { row-gap: #{$size}px; }
+	}
+}
+
+
+@media (min-width: $screen_xl) {
+	
+	@each $size in $sizing {
+		.xl\:gap-#{$size} { gap: #{$size}px; }
+		.xl\:gap-x-#{$size} { column-gap: #{$size}px; }
+		.xl\:gap-y-#{$size} { row-gap: #{$size}px; }
+	}
+}
+
+@media (min-width: $screen_xxl) {
+	
+	@each $size in $sizing {
+		.xxl\:gap-120 { gap: 120px; }
+	}
+}
+
+
+//-----------------------
+// MARGIN 
+//-----------------------
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+.mt-auto { margin-top: auto; }
+.mx-auto { margin-right: auto; margin-left: auto; }
+
+@each $size in $sizing {
+	.m-#{$size} { margin: #{$size}px; }
+	.mx-#{$size} { margin-right: #{$size}px; margin-left: #{$size}px; }
+	.my-#{$size} { margin-top: #{$size}px; margin-bottom: #{$size}px; }
+	.mt-#{$size} { margin-top: #{$size}px; }
+	.mr-#{$size} { margin-right: #{$size}px; }
+	.mb-#{$size} { margin-bottom: #{$size}px; }
+	.ml-#{$size} { margin-left: #{$size}px; }
+}
+
+@media (min-width: $screen_lg) {
+
+	.lg\:mb-auto { margin-bottom: auto; }
+	.lg\:ml-auto { margin-left: auto; }
+	.lg\:mr-auto { margin-right: auto; }
+	.lg\:mt-auto { margin-top: auto; }
+	.lg\:mx-auto { margin-right: auto; margin-left: auto; }
+
+	@each $size in $sizing {
+		.lg\:m-#{$size} { margin: #{$size}px; }
+		.lg\:mx-#{$size} { margin-right: #{$size}px; margin-left: #{$size}px; }
+		.lg\:my-#{$size} { margin-top: #{$size}px; margin-bottom: #{$size}px; }
+		.lg\:mt-#{$size} { margin-top: #{$size}px; }
+		.lg\:mr-#{$size} { margin-right: #{$size}px; }
+		.lg\:mb-#{$size} { margin-bottom: #{$size}px; }
+		.lg\:ml-#{$size} { margin-left: #{$size}px; }
+	}
+}
+
+@media (min-width: $screen_xl) {
+
+	.xl\:mb-auto { margin-bottom: auto; }
+	.xl\:ml-auto { margin-left: auto; }
+	.xl\:mr-auto { margin-right: auto; }
+	.xl\:mt-auto { margin-top: auto; }
+	.xl\:mx-auto { margin-right: auto; margin-left: auto; }
+
+	@each $size in $sizing {
+		.xl\:m-#{$size} { margin: #{$size}px; }
+		.xl\:mx-#{$size} { margin-right: #{$size}px; margin-left: #{$size}px; }
+		.xl\:my-#{$size} { margin-top: #{$size}px; margin-bottom: #{$size}px; }
+		.xl\:mt-#{$size} { margin-top: #{$size}px; }
+		.xl\:mr-#{$size} { margin-right: #{$size}px; }
+		.xl\:mb-#{$size} { margin-bottom: #{$size}px; }
+		.xl\:ml-#{$size} { margin-left: #{$size}px; }
+	}
+}
+
+
+//-----------------------
+// PADDING 
+//----------------------- 
+.px-gutter-x { padding-right: var(--gutter-x); padding-left: var(--gutter-x); }
+.py-gutter-y { padding-top: var(--gutter-x); padding-bottom: var(--gutter-x); }
+
+@each $size in $sizing {
+	.p-#{$size} { padding: #{$size}px; }
+	.px-#{$size} { padding-right: #{$size}px; padding-left: #{$size}px; }
+	.py-#{$size} { padding-top: #{$size}px; padding-bottom: #{$size}px; }
+	.pt-#{$size} { padding-top: #{$size}px; }
+	.pr-#{$size} { padding-right: #{$size}px; }
+	.pb-#{$size} { padding-bottom: #{$size}px; }
+	.pl-#{$size} { padding-left: #{$size}px; }
+}
+
+@media (min-width: $screen_lg) {
+
+	@each $size in $sizing {
+		.lg\:p-#{$size} { padding: #{$size}px; }
+		.lg\:px-#{$size} { padding-right: #{$size}px; padding-left: #{$size}px; }
+		.lg\:py-#{$size} { padding-top: #{$size}px; padding-bottom: #{$size}px; }
+		.lg\:pt-#{$size} { padding-top: #{$size}px; }
+		.lg\:pr-#{$size} { padding-right: #{$size}px; }
+		.lg\:pb-#{$size} { padding-bottom: #{$size}px; }
+		.lg\:pl-#{$size} { padding-left: #{$size}px; }
+	}
+}
+
+@media (min-width: $screen_xl) {
+
+	@each $size in $sizing {
+		.xl\:p-#{$size} { padding: #{$size}px; }
+		.xl\:px-#{$size} { padding-right: #{$size}px; padding-left: #{$size}px; }
+		.xl\:py-#{$size} { padding-top: #{$size}px; padding-bottom: #{$size}px; }
+		.xl\:pt-#{$size} { padding-top: #{$size}px; }
+		.xl\:pr-#{$size} { padding-right: #{$size}px; }
+		.xl\:pb-#{$size} { padding-bottom: #{$size}px; }
+		.xl\:pl-#{$size} { padding-left: #{$size}px; }
+	}
+}
+
+
+//-----------------------
+// WIDTH
+//-----------------------
+// .max-w-220 { max-width: 220px; }
+.max-w-460 { max-width: 460px; }
+// .max-w-640 { max-width: 640px; }
+.max-w-710 { max-width: 710px; }
+.max-w-860 { max-width: 860px; }
+.w-full { width: 100%; }
+
+
+//-----------------------
+// HEIGHT
+//-----------------------
+.h-full { height: 100%; }
+
+
+//-----------------------
+// ASPECT RATIO
+//-----------------------
+
+.ar-16\:9 { aspect-ratio: 16 / 9; }
+.ar-1\:1 { aspect-ratio: 1 / 1; }
+.ar-3\:2 { aspect-ratio: 3 / 2; }
+.ar-3\:4 { aspect-ratio: 3 / 4; }
+.ar-4\:3 { aspect-ratio: 4 / 3; }
+.ar-4\:5 { aspect-ratio: 4 / 5; }
+.ar-5\:4 { aspect-ratio: 5 / 4; }
+// .ar-2\:1 { aspect-ratio: 2 / 1; }
+// .ar-5\:4 { aspect-ratio: 5 / 4; }
+
+@media (min-width: $screen_lg) {
+	.lg\:ar-auto { aspect-ratio: auto; }
+	.lg\:ar-16\:9 { aspect-ratio: 16 / 9; }
+	.lg\:ar-4\:7 { aspect-ratio: 4 / 7; }
+}
+
+
+//-----------------------
+// TYPOGRAPHY 
+//-----------------------
+@each $name, $value in $colors {
+	.text-#{$name} { color: #{$value}; }
+}
+
+@each $name, $value in $colors {
+	.hover\:text-#{$name}:hover,
+	.group:hover .hover\:text-#{$name} { color: #{$value}; }
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.uppercase { text-transform: uppercase; }
+
+.underline,
+.hover\:underline:hover,
+.group:hover .hover\:underline { 
+	text-decoration: underline; 
+	text-underline-offset: 0.2em;
+	//text-decoration-thickness: 0.08333333333em;
+}
+
+
+@media (min-width: $screen_lg) {
+	.lg\:text-left { text-align: left; }
+	.lg\:text-right { text-align: right; }
+}
+
+@media (min-width: $screen_xl) {
+	.xl\:text-left { text-align: left; }
+}
+
+.font-bold { font-weight: bold; }
+.font-semibold { font-weight: 600; }
+.font-italic { font-style: italic; }
+
+
+//-----------------------
+// BACKGROUNDS 
+//-----------------------
+@each $name, $value in $colors {
+	.bg-#{$name} { background-color: #{$value}; }
+}
+
+@each $name, $value in $colors {
+	.hover\:bg-#{$name}:hover,
+	.group:hover .hover\:bg-#{$name} { background-color: #{$value}; }
+}
+
+
+//-----------------------
+// BORDERS 
+//-----------------------
+
+.border { border: 1px solid currentColor; }
+.border-t { border-top: 1px solid currentColor; }
+.border-b { border-bottom: 1px solid currentColor; }
+
+// .border-t-3 { border-top: 3px solid currentColor; }
+// .border-b-3 { border-bottom: 3px solid currentColor; }
+
+@each $name, $value in $colors {
+	.border-#{$name} { border-color: #{$value}; }
+}
+
+// .rounded-sm { border-radius: 8px; }
+// .rounded { border-radius: 20px; }
+
+
+//-----------------------
+// EFFECTS 
+//-----------------------
+//.shadow { box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10); }
+.opacity-20 { opacity: 0.2; }
+.opacity-50 { opacity: 0.5; }
+.grayscale { filter: grayscale(100%); }
+
+
+//-----------------------
+// FILTERS 
+//-----------------------
+
+
+//-----------------------
+// TRANSITIONS & ANIMATIONS 
+//-----------------------
+
+
+//-----------------------
+// TRANSFORMS 
+//-----------------------
+
+
+//-----------------------
+// INTERACTIVITY 
+//-----------------------
+
+
+//-----------------------
+// ACCESSIBILITY 
+//-----------------------
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}

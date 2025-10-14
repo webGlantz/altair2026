@@ -1,0 +1,117 @@
+.hero_home {
+
+	&__top {
+		background: linear-gradient(180deg, rgba(46, 68, 109, 0.92) -6.28%, rgba(54, 86, 156, 0.46) 81.93%, rgba(89, 132, 211, 0.00) 106.28%);
+		background-blend-mode: multiply;
+	}
+
+	&__control {
+		position: absolute;
+		bottom: 12px;
+		right: 12px;
+		border: 0;
+	}
+	
+	@media (min-width: $screen_xl) {
+
+		&__top {
+			background: linear-gradient(90deg, rgba(46, 68, 109, 0.92) 0%, rgba(54, 86, 156, 0.46) 60.84%, rgba(89, 132, 211, 0.00) 79.82%); 
+		}
+
+		&__control {
+			bottom: 36px;
+			right: 36px;
+		}
+
+		&__media {
+			margin-top: -160px;
+			margin-left: auto;
+			width: 60%;
+		}
+	}
+
+	@media (max-width: #{$screen_xl - 1}) {
+		&__container {
+			--spacing-x: 0;
+		}
+	}
+}
+
+.hero_interior {
+	
+	&.has-img { margin-bottom: 150px; }
+
+	&__image { margin-bottom: -150px; }
+
+	@media (min-width: $screen_lg) {
+		&.has-img { margin-bottom: 360px; }
+		&.has-bg.has-img { margin-bottom: 460px; }
+		&__image { margin-bottom: -460px; }
+		
+	}
+}
+
+.hero_cta {
+	margin-bottom: -120px;
+
+	&:before {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		background-color: var(--lightning-blue);
+		mix-blend-mode: screen;
+		content: '';
+		transition: all var(--time);
+	}
+
+	&:after {
+		z-index: 0;
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(13, 40, 168, 0.00) 0%, #051042 100%);
+		content: '';
+		transition: all var(--time);
+	}
+
+	&__img { 
+		filter: grayscale(100%); 
+		transition: all var(--time);
+	}
+
+	&__icon {
+		flex: 0 0 45px;
+		height: 45px;
+		font-size: 22px;
+		transition: all var(--time);
+	}
+
+	&:hover,
+	&:focus {
+		.hero_cta__img { opacity: 0.5; }
+		&:after { opacity: 0; }
+	}
+
+	@media (min-width: $screen_lg) {
+		margin-bottom: 0;
+		grid-column-start: 8;
+		grid-row-end: span 2;
+		grid-row-start: 1;
+	}
+
+	@media (min-width: $screen_xl) {
+		grid-column-start: 9;
+	}
+}
+
+.hero_post {
+	
+
+
+	
+	@media (max-width: #{$screen_lg - 1}) {
+		.gridmarks,
+		.gridmarks__wrapper { display: none; }
+
+		&__top { padding-bottom: 120px; }
+	}
+}

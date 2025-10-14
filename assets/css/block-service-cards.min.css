@@ -1,0 +1,1 @@
+@media (min-width: 1024px){.c_service-cards__grid{padding-bottom:var(--gutter-x)}.c_service-cards__grid:before{position:absolute;z-index:-1;top:218px;right:calc(-1 * var(--gutter-x));bottom:0;left:calc(-1 * var(--gutter-x));background:var(--green);content:''}}.c_service-card{background:black}.c_service-card__img{opacity:0.4}

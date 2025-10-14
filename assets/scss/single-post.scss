@@ -1,0 +1,19 @@
+@import '../../assets/scss/foundation/_variables.scss';
+
+.toc {
+	margin-top: -150px;
+
+	&__link.is-active span:last-child {
+		color: var(--safety-yellow);
+		text-decoration: underline;
+	}
+
+
+	@media (min-width: $screen_lg) {
+		position: sticky;
+		top: calc(24px + var(--wp-admin--admin-bar--height, 0px));
+		order: 9999;
+		margin-top: -240px;
+	}
+
+}

@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/headline-text-bg",
+	"title": "Headline + Text + Background Image",
+	"description": "A custom block with content and background image.",
+	"category": "glantz-blocks",
+	"icon": "align-pull-left",
+	"keywords": ["bg", "content", "image", "call to action"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "headline-text-bg.php",
+		"postTypes": [
+			"page"
+		]
+	},
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.1.0"
+}

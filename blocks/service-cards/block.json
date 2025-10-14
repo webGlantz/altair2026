@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/service-cards",
+	"title": "Service Cards",
+	"description": "A custom block with card links.",
+	"category": "glantz-blocks",
+	"icon": "align-pull-left",
+	"keywords": ["call to action", "link"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "service-cards.php",
+		"postTypes": [
+			"page"
+		]
+	},
+	"style": ["service-cards"],
+	"script": ["service-cards"],
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.2.0"
+}
