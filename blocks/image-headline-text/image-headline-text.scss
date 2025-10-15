@@ -1,0 +1,62 @@
+@import '../../assets/scss/foundation/_variables.scss';
+
+.c_ac {
+	&__image:before {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, var(--bg) 0%, rgba(255, 255, 255, 0.00) 79.82%);
+		background-blend-mode: multiply;
+		content: '';
+	}
+
+	&--right &__item:nth-child(2n-1) &__image,
+	&--left &__item:nth-child(2n) &__image {  
+		&:before { transform: translateX(calc(-1 * var(--gutter-x))) translateY(var(--gutter-x)); }
+	}
+
+	
+
+	&--right &__item:nth-child(2n) &__image,
+	&--left &__item:nth-child(2n-1) &__image{ 
+		&:before { transform: translateX(var(--gutter-x)) translateY(var(--gutter-x)); }
+	}
+
+	@media (min-width: $screen_lg) {
+
+
+		&--right &__item:nth-child(2n-1) &__image,
+		&--left &__item:nth-child(2n) &__image { 
+			margin-right: 24px; 
+		}
+
+		&--right &__item:nth-child(2n) &__image,
+		&--left &__item:nth-child(2n-1) &__image{ 
+			order: 9999;
+			margin-left: 24px;
+		}
+
+		&--right &__item:nth-child(2n) &__content,
+		&--left &__item:nth-child(2n-1) &__content { grid-column-start: 1; margin-left: auto; }
+
+		&__item:not(:last-child) &__image { margin-bottom: var(--gutter-y); }
+		
+		&__image {
+			&:before { bottom: calc(-1 * var(--gutter-y)); }
+		}
+	}
+
+	@media (min-width: $screen_xl) {
+
+		&--right &__item:nth-child(2n-1) &__image,
+		&--left &__item:nth-child(2n) &__image { 
+			margin-right: 48px; 
+		}
+
+		&--right &__item:nth-child(2n) &__image,
+		&--left &__item:nth-child(2n-1) &__image{ 
+			margin-left: 48px;
+		}
+	}
+}
+
+//lg:mr-24 xl:mr-60

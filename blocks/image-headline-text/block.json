@@ -1,19 +1,19 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"name": "glantz/text-image-cta",
-	"title": "Text + Image + CTA",
-	"description": "A custom block with image and content.",
+	"name": "glantz/image-headline-text",
+	"title": "Image + Headline + Text",
+	"description": "A custom block with image and content",
 	"category": "glantz-blocks",
 	"icon": "align-pull-left",
-	"keywords": ["alternating", "content", "image", "call to action"],
+	"keywords": ["content", "image", "call to action"],
 	"acf": {
 		"mode": "edit",
-		"renderTemplate": "text-image-cta.php",
+		"renderTemplate": "image-headline-text.php",
 		"postTypes": [
 			"page"
 		]
 	},
-	"style": ["text-image-cta"],
+	"style": ["image-headline-text"],
 	"supports": {
 		"align": "false",
 		"anchor": "true",

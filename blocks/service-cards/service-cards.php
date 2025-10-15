@@ -19,7 +19,7 @@ echo CONTENT_CLOSE;
 <!-- component: service cards -->
 <section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_service cards relative z-1">
 
-	<div class="c_service-cards__container container grid gap-48">
+	<div class="c_service-cards__container container grid gap-48 lg:gap-60">
 		
 
 		<div class="c_service-cards__content relative z-1 layout-grid grid items-end gap-12 lg:gap-24">

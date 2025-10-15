@@ -19,20 +19,20 @@ echo CONTENT_CLOSE;
 <!-- component: tabs -->
 <section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_tabs relative z-1" x-data="{ active: 0 }">
 
-	<div class="c_tabs__container container layout-grid gap-48">
+	<div class="c_tabs__container container layout-grid gap-48 lg:gap-60">
 
 		<!-- headline -->
 		<?php if($fields['headline']) : ?>
-			<h2 class="c_tabs__headline col-4 lg:col-5">
+			<h2 class="c_tabs__headline col-4 lg:col-6 lg:mr-24 xl:mr-60">
 				<?=$fields['headline']?>
 			</h2>
 		<?php endif; ?>
 
-		<div class="c_tab col-4 lg:col-12 layout-grid gap-24">
+		<div class="c_tab col-4 lg:col-12 layout-grid gap-24 lg:gap-48">
 			<?php foreach($fields['tabs'] as $index=>$tab) : ?>
 
 				<!-- image -->
-				<div x-show="<?=$index?> === active" class="c_tab__image relative z-1 col-4 lg:col-5 ar-5:4">
+				<div x-show="<?=$index?> === active" class="c_tab__image relative z-1 col-4 lg:col-6 lg:mr-24 xl:mr-60 ar-5:4">
 					
 					<?php echo core::get_custom_srcset(
 						array(
@@ -58,7 +58,7 @@ echo CONTENT_CLOSE;
 				</div>	
 
 				<?php foreach($fields['tabs'] as $index=>$tab) : ?>
-					<div x-show="<?=$index?> === active" class="c_tab__text grid gap-12 lg:gap-24">
+					<div x-show="<?=$index?> === active" class="c_tab__text grid gap-12 lg:gap-24 lg:mb-24 max-w-560">
 
 						<!-- headline -->
 						<?php if($tab['headline']) : ?>

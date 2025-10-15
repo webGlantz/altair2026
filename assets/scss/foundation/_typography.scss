@@ -219,31 +219,12 @@ h6,
 			position: relative; 
 			padding-left: 12px;
 
-			&::marker {
-				color: var(--wood-beam);
-			}
-
 			&:not(:first-child) { padding-top: 0.5em; }
 			&:not(:last) { padding-botton: 0.5em; }
 		}
 	}
 
-	ul li::marker {
-		content: '+';
-	}
-
-	ol {
-		counter-reset: olCounter;
-
-		li {
-			counter-increment: olCounter;
-
-			&::marker {
-				content: counter(olCounter);
-				font-weight: bold;
-			}
-		}
-	}
+	ol li::marker { font-weight: 600; }
 
 	table {
 
