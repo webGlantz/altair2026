@@ -265,6 +265,9 @@ class core {
 		if(!isset($hero['style']) || !$hero['style']) :
 			if (get_option('page_on_front') == $id) {
 				$hero['style'] = 'home';
+			} 
+			elseif(get_option('page_for_posts') == $id) {
+				$hero['style'] = 'featured-post';
 			} elseif (is_singular('post') && get_the_ID() === $id) {
 				$hero['style'] = 'single-post';
 			} elseif (!$hero['image']) {

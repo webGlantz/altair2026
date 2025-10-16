@@ -43,52 +43,12 @@ if (have_posts()) :
 
 	// Hero. 
 	if($hero) :
-		include locate_template('partials/hero/interior.php', false, false);
-	endif;
-
-
-	if(!empty($featured_post)) : 
-
-		$p = $featured_post[0];
-
-		$data = array(
-			'headline'=>$p->post_title,
-			'subheadline'=>'',
-			'text'=>get_the_excerpt($p->ID),
-			'layout'=>'left',
-			'image'=>get_post_thumbnail_id($p->ID),
-			'buttons'=>array(
-				array(
-					'link'=>array(
-						'url'=>get_permalink($p->ID),
-						'target'=>'_self',
-						'title'=>'Read Post',
-					)
-				)
-			)
-		);
-
-		$block = '<!-- wp:glantz/text-image-cta {"name":"glantz/text-image-cta","data":' . json_encode($data) . '} /-->';
-
-		$parsed_blocks = parse_blocks( $block );
-
-		if ( $parsed_blocks ) {
-			foreach ( $parsed_blocks as $block ) {
-				echo render_block( $block ) ;
-			}
-		}
-
+		include locate_template('partials/hero/' . $hero['style'] . '.php', false, false);
 	endif; ?>
 
 	<section class="component c_feed relative z-1 grid gap-24 lg:gap-48">
 
-		<?php if(!empty($feed_headline)) : ?>
-			<h2 class="text-center"><?=$feed_headline?></h2>
-		<?php endif; ?>
-
 		<div class="c_feed__container container layout-grid gap-20">
-
-			
 
 			<?php
 
