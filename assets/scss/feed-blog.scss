@@ -1,5 +1,50 @@
 @import '../../assets/scss/foundation/_variables.scss';
 
+.hero_featured-post {
+
+	--size: 300px;
+
+	&.has-post { margin-bottom: var(--size); }
+
+	&__post { margin-bottom: calc(-1 * var(--size)); }
+
+	&__excerpt {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
+	}
+
+	@media (min-width: $screen_lg) {
+		&.has-post { margin-bottom: 265px; }
+		&__post { margin-top: 60px; }
+	}
+
+	@media (min-width: $screen_xl) {
+		&.has-post { margin-bottom: 225px; }
+		&__post { margin-top: -30px; }
+	}
+}
+
+.c_feed {
+	&__filter {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			right: 0;
+			bottom: -14px;
+			left: 0;
+			height: 7px;
+			background: currentColor;
+			opacity: 0;
+			content: '';
+		}
+
+		&.is-active:before { opacity: 1; }
+	}
+}
+
 .loop-post {
 
 

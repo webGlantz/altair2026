@@ -11,18 +11,7 @@ use glantz\core;
 add_action('wp_enqueue_scripts', function() {
 	wp_enqueue_style('feed-blog');
 	wp_enqueue_style('single-post');
-	wp_enqueue_script('table-of-contents');
 });
-
-if('case-study' === $post->post_type) {
-
-	$type = get_field('project_type');
-	$location = get_field('project_location');
-
-	add_action('wp_enqueue_scripts', function() {
-		wp_enqueue_style('service-cards');
-	});
-}
 
 global $hero;
 
@@ -38,25 +27,19 @@ if (have_posts()) :
 		// Hero. 
 		if($hero) :
 
-			if('case-study' === $post->post_type) : 
-				$hero['eyebrow'] = $type . ($type && $location ? ',  ' : '') . $location;
-			endif;
-
 			include locate_template('partials/hero/post.php', false, false);
 			 
 		endif; ?>
 
-		<section class="component" x-data="toc">
-			<div class="container layout-grid items-start">
+		<section class="component bg-white">
+			<div class="container ">
 
-				<?php include locate_template('partials/misc/table-of-contents.php', false, false); ?>
+				
 
-				<div class="single-post__container toc__content col-4 lg:col-7 xl:col-8 relative">
+				<div class="t_wysiwyg t_body"><?=the_content()?></div>
 
-					<div class="t_wysiwyg t_body"><?=the_content()?></div>
-
-					<?php include locate_template('partials/post/related-articles.php', false, false); ?>
-				</div>
+					
+				
 			</div>
 		</section>
 

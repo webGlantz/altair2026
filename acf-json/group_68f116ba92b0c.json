@@ -1,6 +1,6 @@
 {
     "key": "group_68f116ba92b0c",
-    "title": "Hero - Blog",
+    "title": "Blog",
     "fields": [
         {
             "key": "field_68f116ba93820",
@@ -120,6 +120,32 @@
                     "bidirectional_target": []
                 }
             ]
+        },
+        {
+            "key": "field_68f147f9f5e0c",
+            "label": "Exclude Category from Filters",
+            "name": "exclude_category",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -141,5 +167,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760631638
+    "modified": 1760643987
 }

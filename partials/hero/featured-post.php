@@ -23,7 +23,7 @@ use glantz\core;
 					'lazy'=>false,
 					'attachment_id'=>$hero['bg'],
 					'size'=>'original',
-					'sizes'=>'(min-width: 1040px) 100vw, (min-width: 740px) 140.71vw, (min-width: 400px) calc(118.44vw + 276px), calc(92.5vw + 438px)',
+					'sizes'=>'(min-width: 440px) 100vw, (min-width: 340px) calc(56.25vw + 184px), calc(-750vw + 2775px)',
 					'classes'=>'hero_featured-post__bg-img absolute inset-0 object-cover -z-1 opacity-20',
 				)
 			); ?>
@@ -52,7 +52,7 @@ use glantz\core;
 						'lazy'=>false,
 						'attachment_id'=>get_post_thumbnail_id($featured->ID),
 						'size'=>'original',
-						'sizes'=>'(min-width: 1040px) 100vw, (min-width: 740px) 140.71vw, (min-width: 400px) calc(118.44vw + 276px), calc(92.5vw + 438px)',
+						'sizes'=>'(min-width: 1560px) 716px, (min-width: 1280px) calc(34.62vw + 182px), (min-width: 1040px) 56.36vw, (min-width: 400px) calc(112.42vw - 45px), (min-width: 340px) 423px, calc(-270vw + 1305px)',
 						'classes'=>'hero_featured-post__img absolute inset-0 object-cover -z-1 zoom-hover opacity-50',
 					)
 				); ?>

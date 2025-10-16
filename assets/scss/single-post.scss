@@ -1,19 +1,19 @@
 @import '../../assets/scss/foundation/_variables.scss';
 
-.toc {
-	margin-top: -150px;
-
-	&__link.is-active span:last-child {
-		color: var(--safety-yellow);
-		text-decoration: underline;
+.hero_post {
+	&__top {
+		background: var(--bg);
 	}
 
-
-	@media (min-width: $screen_lg) {
-		position: sticky;
-		top: calc(24px + var(--wp-admin--admin-bar--height, 0px));
-		order: 9999;
-		margin-top: -240px;
+	&__image:after {
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+		content: '';
+		background: linear-gradient(to bottom, var(--bg), rgba(255,255,255,0));
 	}
 
+	@media (max-width: #{$screen_lg - 1}) {
+		.container { --spacing-x: 0; }
+	}
 }

@@ -40,8 +40,6 @@ class hook extends base\hook {
 			'yoasttobottom'=>null,
 		),
 
-		
-
 	);
 
 	// Actions to remove. 

@@ -372,6 +372,8 @@
 .font-semibold { font-weight: 600; }
 .font-italic { font-style: italic; }
 
+.nowrap { white-space: nowrap; }
+
 
 //-----------------------
 // BACKGROUNDS 
@@ -395,7 +397,7 @@
 .border-b { border-bottom: 1px solid currentColor; }
 
 // .border-t-3 { border-top: 3px solid currentColor; }
-// .border-b-3 { border-bottom: 3px solid currentColor; }
+.border-b-2 { border-bottom: 2px solid currentColor; }
 
 @each $name, $value in $colors {
 	.border-#{$name} { border-color: #{$value}; }

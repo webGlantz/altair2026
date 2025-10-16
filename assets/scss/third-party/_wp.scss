@@ -163,16 +163,29 @@ body {
 	}
 
 	.page-numbers:not(.next):not(.prev):not(.dots) {
-		@extend .t_body;
+		position: relative;
 
-		width: 24px;
-		height: 24px;
-		border: 1px solid var(--midnight);
-		border-radius: 50px;
+		@extend .t_body;
+		@extend .t_body--lg;
+
+		width: 52px;
+		height: 52px;
+
+		&:before {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			background: var(--blue);
+			content: '';
+			transition: all var(--time);
+		}
+		
 
 		&:not(.current):hover,
 		&:not(.current):focus {
-			background-color: var(--safety-yellow);
+			&:before { height: 7px; }
 		}
 	}
 
@@ -187,7 +200,7 @@ body {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 20px;
+		//font-size: 20px;
 
 		&:hover {
 			transform: scale(1.1);
@@ -197,7 +210,7 @@ body {
 	}
 
 	.page-numbers:not(.next):not(.prev).current {
-		background: var(--lightning-blue);
+		background: var(--blue);
 		color: var(--white);
 	}
 }
