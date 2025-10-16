@@ -1,19 +1,40 @@
 @import '../../assets/scss/foundation/_variables.scss';
 
 .hero_post {
-	&__top {
-		background: var(--bg);
-	}
+	&__top { background: var(--bg); }
 
 	&__image:after {
 		position: absolute;
 		inset: 0;
 		z-index: 1;
 		content: '';
-		background: linear-gradient(to bottom, var(--bg), rgba(255,255,255,0));
+		background: linear-gradient(to bottom, var(--bg), rgba(255,255,255,0) 50%);
 	}
 
 	@media (max-width: #{$screen_lg - 1}) {
 		.container { --spacing-x: 0; }
+	}
+
+	@media (min-width: $screen_lg) {
+		&__top { background: transparent; }
+
+		&__image {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 50%;
+			&:after { background: linear-gradient(to right, var(--bg), rgba(255,255,255,0) 50%); }
+		}
+
+		&:after {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 50%;
+			background: var(--bg);
+			content: '';
+		}
 	}
 }

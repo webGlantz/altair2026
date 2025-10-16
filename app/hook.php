@@ -367,7 +367,7 @@ class hook extends base\hook {
 				'has_archive'=>'our-team',
 				'rewrite'=>array('slug'=>'team'),
 				'menu_icon'=>'dashicons-groups',
-				'supports'=>array('title', 'thumbnail', 'revisions'),
+				'supports'=>array('title', 'thumbnail', 'revisions', 'editor'),
 				'taxonomies'=>array('team_category'),
 			)
 		);

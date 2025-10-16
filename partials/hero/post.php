@@ -12,28 +12,67 @@ use glantz\core;
 $path = parse_url(get_post_type_archive_link($post->post_type))['path'];
 $archive = get_page_by_path($path);
 $exclude = get_field('exclude_category', $archive->ID);
-$categories = wp_list_pluck(get_the_terms($post->ID, 'category') ?: [], 'name');
+$cats = get_the_terms($post->ID, 'category');
+$categories = wp_list_pluck($cats ?: [], 'name');
+$authors = get_field('authors');
 
 ?>
 
 <!-- hero: post -->
-<section class="hero hero_post relative z-1 text-white" style="--bg: <?=(in_array($post->ID, $exclude) ? 'var(--blue)' : 'var(--green)')?>">
+<section class="hero hero_post relative z-1 text-white" style="--bg: <?=(in_array($cats[0]->term_id, $exclude) ? 'var(--blue)' : 'var(--green)')?>">
 
 	
 
 	<div class="relative z-1 container layout-grid gap-24 lg:gap-y-96">
 
 
-		<div class="hero-top hero_interior__top hero_post__top relative col-4 grid gap-24 lg:gap-48 py-24 px-gutter-x">
+		<div class="hero-top hero_interior__top hero_post__top relative col-4 lg:col-8 grid gap-24 lg:gap-36 py-48 lg:py-60 lg:py-72 px-gutter-x">
 			
 			<?php if($categories) : ?>
+				<!-- category -->
 				<div class="t_label t_label--blog">
 					<span class="underline"><?=implode('</span> <span class="underline">', $categories)?></span>	
 				</div>
 			<?php endif; ?>
 
-			<h1><?=(isset($hero['headline']) ? $hero['headline'] : get_the_title())?></h1>
+			<!-- title -->
+			<h1 class="t_h2"><?=(isset($hero['headline']) ? $hero['headline'] : get_the_title())?></h1>
 			
+			<?php if(!empty($authors)) : ?>
+				<!-- authors -->
+				<div class="hero_post__authors grid gap-24">
+					<?php foreach($authors as $author) :
+						$img = get_post_thumbnail_id($author->ID);
+						$position = get_field('position', $author->ID);
+
+						?>
+						<a href="<?=get_permalink($author->ID)?>" class="flex gap-24 items-center w-full">
+
+							<?php if(!empty($img)) : ?>
+								<div class="relative z-1 ar-1:1 rounded-full overflow-hidden zoom-hover" style="flex: 0 0 90px;">
+									<?php echo core::get_custom_srcset(
+										array(
+											'lazy'=>false,
+											'attachment_id'=>$img,
+											'size'=>'original',
+											'sizes'=>'(min-width: 1040px) 100vw, (min-width: 740px) 140.71vw, (min-width: 400px) calc(118.44vw + 276px), calc(92.5vw + 438px)',
+											'classes'=>'hero_interior__bg-img absolute inset-0 object-cover -z-1',
+										)
+									); ?>
+								</div>
+							<?php endif; ?>
+
+							<div class="grid">
+								<div class="t_label"><?=$author->post_title?></div>
+
+								<?php if(!empty($position)) : ?>
+									<div class="t_body t_body--sm"><?=$position?></div>
+								<?php endif; ?>
+							</div>
+						</a>
+					<?php endforeach; ?>
+				</div>
+			<?php endif; ?>
 
 		</div>
 		
@@ -41,7 +80,7 @@ $categories = wp_list_pluck(get_the_terms($post->ID, 'category') ?: [], 'name');
 
 	<?php if(!empty($hero['image'])) : ?>
 		<!-- bg -->
-		<div class="hero_post__image relative ar-4:3">
+		<div class="hero_post__image relative -z-1 ar-4:3 lg:ar-auto">
 			
 			<?php echo core::get_custom_srcset(
 				array(
