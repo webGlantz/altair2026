@@ -40,6 +40,10 @@ class hook extends base\hook {
 			'yoasttobottom'=>null,
 		),
 
+		'pre_get_posts'=>array(
+			'team_show_all'=>array('arguments'=>1),
+		)
+
 	);
 
 	// Actions to remove. 
@@ -222,8 +226,22 @@ class hook extends base\hook {
 		);
 
 		\wp_register_style(
+			'single-team',
+			\get_stylesheet_directory_uri() . '/assets/css/single-team.min.css',
+			array(),
+			\VERSION,
+		);
+
+		\wp_register_style(
 			'feed-blog',
 			\get_stylesheet_directory_uri() . '/assets/css/feed-blog.min.css',
+			array(),
+			\VERSION,
+		);
+
+		\wp_register_style(
+			'feed-team',
+			\get_stylesheet_directory_uri() . '/assets/css/feed-team.min.css',
 			array(),
 			\VERSION,
 		);
@@ -354,7 +372,7 @@ class hook extends base\hook {
 	public static function post_types() : void {
 
 		\register_post_type(
-			'person',
+			'team',
 			array(
 				'label'=>'Team Members',
 				'labels'=>array(
@@ -368,7 +386,7 @@ class hook extends base\hook {
 				'rewrite'=>array('slug'=>'team'),
 				'menu_icon'=>'dashicons-groups',
 				'supports'=>array('title', 'thumbnail', 'revisions', 'editor'),
-				'taxonomies'=>array('team_category'),
+				'taxonomies'=>array('group'),
 			)
 		);
 
@@ -398,12 +416,12 @@ class hook extends base\hook {
 	 */
 	public static function taxonomies() : void {
 		register_taxonomy(
-			'team_category',
-			array('person'),
+			'group',
+			array('team'),
 			array(
-				'label'=>'Categories',
+				'label'=>'Groups',
 				'labels'=>array(
-					'add_new_item'=>'Add New Category',
+					'add_new_item'=>'Add New Group',
 				),
 				'public'=>false,
 				'show_ui'=>true,
@@ -507,5 +525,19 @@ class hook extends base\hook {
 		// Just omit h1 from the list
 		$args['block_formats'] = 'Paragraph=p;Heading 2=h2;Heading 3=h3;Heading 4=h4;Heading 5=h5;Heading 6=h6;Pre=pre';
 		return $args;
+	}
+
+
+	public static function team_show_all($query) {
+
+		if (is_admin() || !$query->is_main_query() || !is_post_type_archive('team') ) {
+	        return;
+	    }
+
+	    $query->set( 'showposts', -1 );
+	    $query->set('orderby', 'menu_order');
+	    $query->set('order','ASC');
+
+		return $query;
 	}
 }

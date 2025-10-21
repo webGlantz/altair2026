@@ -97,6 +97,33 @@ class core {
 					$posts[] = get_post($i);
 				endforeach;
 			endif;
+
+		elseif('author' === $args['display']) :
+
+			$settings = array(
+				'numberposts'=>$args['showposts'],
+				'posts_per_page'=>$args['showposts'],
+				'post_type'=>$args['post_type'],
+				'orderby'=>$args['orderby'],
+				'order'=>$args['order'],
+				'exclude'=>$args['exclude'],
+				'suppress_filters'=>false,
+				'paged'=>\get_query_var('paged'),
+				'meta_query'=>array(
+					array(
+						'key' => 'authors', // name of custom field
+						'value' => '"' . $args['author'] . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+						'compare' => 'LIKE'
+					)
+				)
+			);
+
+			if(isset($args['pagination']) && $args['pagination']) :
+				$posts = new \WP_Query($settings);
+			else :
+				$posts = get_posts($settings);
+			endif;
+
 			
 		else :
 			$settings = array(

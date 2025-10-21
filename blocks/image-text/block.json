@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/image-text",
+	"title": "Image + Text",
+	"description": "A custom block with image and content",
+	"category": "glantz-blocks",
+	"icon": "align-pull-left",
+	"keywords": ["content", "image"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "image-text.php",
+		"postTypes": [
+			"post"
+		]
+	},
+	"style": ["image-text"],
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.1.0"
+}

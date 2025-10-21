@@ -76,18 +76,14 @@ h5,
 h6,
 .t_h6 {
 	font-family: var(--ivypresto);
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: 300;
 	line-height: 1.25;
 	letter-spacing: 0.02em;
-
-	@media (min-width: $screen_lg) {
-		font-size: 24px;
-	}
 }
 
 .t_body {
-	font-family: var(--figtree);
+	font-family: var(--articulat);
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5;
@@ -164,13 +160,11 @@ h6,
 		text-decoration-line: underline;
 		text-decoration-color: currentColor;
 		text-underline-offset: 0.2em;
-		
-		color: var(--navy);
 		font-weight: 700;
 
 		&:hover,
 		&:focus {  
-			color: var(--lightning-blue);
+			color: var(--green);
 		}
 	}
 
@@ -190,12 +184,12 @@ h6,
 	blockquote {
 		position: relative;
 		font-size: 22px;
-		font-family: var(--larken);
-		font-style: italic;
+		font-family: var(--ivypresto);
+		//font-style: italic;
 		line-height: 1.5;
 
 		cite {
-			@extend .t_body;
+			@extend .t_label;
 			font-style: normal;
 
 			&:before {
@@ -232,16 +226,16 @@ h6,
 		border: 0;
 
 		tbody tr {
-			border-bottom: 1px solid var(--navy);
+			border-bottom: 1px solid var(--blue-light);
 		}
 
 		th {
 
-			@extend .t_h6;
+			@extend .t_label;
 
 			position: relative;
 
-			background: var(--prussian-blue);
+			background: var(--blue);
 			color: var(--white);
 
 			&:not(:first-child):before,
@@ -310,8 +304,8 @@ h6,
 
 	hr {
 		margin: 36px 0;
-		border-color: var(--lightning-blue);
-		border-width: 1px;
+		box-shadow: none;
+		border: 1px solid var(--blue-light);
 	}
 
 	@media (min-width: $screen_lg) {
@@ -326,8 +320,8 @@ h6,
 		}
 
 		p, ol, ul {
-			&:not(:first-child) { margin-top: 18px; }
-			&:not(:last-child) { margin-bottom: 18px; }
+			&:not(:first-child) { margin-top: 24px; }
+			&:not(:last-child) { margin-bottom: 24px; }
 		}
 
 		blockquote {

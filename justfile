@@ -58,7 +58,9 @@ blocks_dir := justfile_directory() + "/blocks"
 	just _scss "{{ scss_dir }}/clean-editor.scss"
 	just _scss "{{ scss_dir }}/core.scss"
 	just _scss "{{ scss_dir }}/feed-blog.scss"
+	just _scss "{{ scss_dir }}/feed-team.scss"
 	just _scss "{{ scss_dir }}/single-post.scss"
+	just _scss "{{ scss_dir }}/single-team.scss"
 	find "{{ blocks_dir }}" -name "*.scss" -type f -exec just _scss {} "block-" \;
 
 	echo ""

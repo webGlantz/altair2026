@@ -169,6 +169,7 @@
 	.lg\:order-first { order: -1; }
 	.lg\:order-last { order: 999; }
 	.lg\:justify-between { justify-content: space-between; }
+	.lg\:items-center { align-items: center; }
 	
 	@each $size in $sizing {
 		.lg\:gap-#{$size} { gap: #{$size}px; }
@@ -369,6 +370,7 @@
 }
 
 .font-bold { font-weight: bold; }
+.font-medium { font-weight: 500; }
 .font-semibold { font-weight: 600; }
 .font-italic { font-style: italic; }
 

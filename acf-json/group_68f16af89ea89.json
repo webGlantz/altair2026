@@ -17,7 +17,7 @@
                 "id": ""
             },
             "post_type": [
-                "person"
+                "team"
             ],
             "post_status": [
                 "publish"
@@ -54,5 +54,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760652058
+    "modified": 1760652060
 }

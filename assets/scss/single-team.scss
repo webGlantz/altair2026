@@ -1,0 +1,55 @@
+@import '../../assets/scss/foundation/_variables.scss';
+
+.hero_team {
+	padding: 48px 0;
+
+	&:before {
+		position: absolute;
+		inset: 0;
+		content: '';
+		z-index: -1;
+		opacity: 0.2;
+		background: url('../img/White-Marble-Texture.jpg') center center no-repeat;
+		background-size: cover;
+	}
+
+	&__image { 
+		order: 9999; 
+		margin-bottom: -180px; }
+
+	@media (min-width: $screen_lg) {
+		padding: 84px 0;
+
+		&__image {
+			order: 0;
+			align-self: flex-end;
+		 	margin-bottom: -180px; 
+		}
+	}
+
+	@media (min-width: $screen_xl) {
+		&__image { margin-bottom: -204px; }
+	}
+}
+
+.single-team {
+
+	--gutter-y: 48px;
+
+	&__aside { margin-top: 120px; }
+
+	@media (min-width: $screen_lg) {
+
+		--gutter-y: 84px;
+
+		&__aside { margin-top: 60px; }
+	}
+
+	@media (min-width: $screen_xl) {
+		&__aside { margin-top: 84px; }
+	}
+}
+
+main {
+	background: var(--white);
+}

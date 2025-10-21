@@ -95,7 +95,6 @@ if (have_posts()) :
 				$item = array(
 					'id'=>$post->ID,
 					'title'=>$post->post_title,
-					'text'=>('case-study' == $post->post_type ? get_field('project_type') . ', ' . get_field('project_location') : ''),
 					'image'=>$thumb,
 					'cats'=>$cats,
 					'url'=>get_permalink(),

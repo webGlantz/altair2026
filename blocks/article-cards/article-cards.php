@@ -29,7 +29,7 @@ if(!$items) :
 	return;
 endif; 
 
-echo CONTENT_CLOSE;
+echo (!empty($data) ? '' : CONTENT_CLOSE);
 
 ?>
 
@@ -90,4 +90,4 @@ echo CONTENT_CLOSE;
 
 <?php
 
-echo CONTENT_OPEN;
+echo (!empty($data) ? '' : CONTENT_OPEN);

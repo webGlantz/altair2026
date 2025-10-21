@@ -15,7 +15,7 @@ $categories = wp_list_pluck(get_the_terms($item['id'], 'category') ?: [], 'name'
 
 	<?php if($item['image']) : ?>
 		<!-- image -->
-		<div class="loop-post__image relative overflow-hidden block w-full ar-5:4 zoom-hover bg-off-white">
+		<div class="loop-post__image relative overflow-hidden block w-full ar-5:4 zoom-hover bg-blue-light">
 			<?php echo glantz\core::get_custom_srcset(
 				array(
 					'lazy'=>true,

@@ -204,7 +204,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "person"
+                "value": "team"
             }
         ]
     ],
@@ -218,5 +218,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760652521
+    "modified": 1760663941
 }

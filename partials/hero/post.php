@@ -19,19 +19,19 @@ $authors = get_field('authors');
 ?>
 
 <!-- hero: post -->
-<section class="hero hero_post relative z-1 text-white" style="--bg: <?=(in_array($cats[0]->term_id, $exclude) ? 'var(--blue)' : 'var(--green)')?>">
+<section class="hero hero_post relative z-1 text-white" style="--bg: <?=(!empty($cats) && in_array($cats[0]->term_id, $exclude) ? 'var(--blue)' : 'var(--green)')?>">
 
 	
 
 	<div class="relative z-1 container layout-grid gap-24 lg:gap-y-96">
 
 
-		<div class="hero-top hero_interior__top hero_post__top relative col-4 lg:col-8 grid gap-24 lg:gap-36 py-48 lg:py-60 lg:py-72 px-gutter-x">
+		<div class="hero-top hero_interior__top hero_post__top relative col-4 lg:col-8 grid gap-24 lg:gap-36 py-48 lg:py-60 lg:py-72 px-gutter-x lg:px-0 max-w-710">
 			
 			<?php if($categories) : ?>
 				<!-- category -->
-				<div class="t_label t_label--blog">
-					<span class="underline"><?=implode('</span> <span class="underline">', $categories)?></span>	
+				<div class="t_label t_label--blog underline">
+					<?=the_category()?>	
 				</div>
 			<?php endif; ?>
 
@@ -46,7 +46,7 @@ $authors = get_field('authors');
 						$position = get_field('position', $author->ID);
 
 						?>
-						<a href="<?=get_permalink($author->ID)?>" class="flex gap-24 items-center w-full">
+						<a href="<?=get_permalink($author->ID)?>" class="flex gap-24 items-center w-full group">
 
 							<?php if(!empty($img)) : ?>
 								<div class="relative z-1 ar-1:1 rounded-full overflow-hidden zoom-hover" style="flex: 0 0 90px;">
@@ -55,7 +55,7 @@ $authors = get_field('authors');
 											'lazy'=>false,
 											'attachment_id'=>$img,
 											'size'=>'original',
-											'sizes'=>'(min-width: 1040px) 100vw, (min-width: 740px) 140.71vw, (min-width: 400px) calc(118.44vw + 276px), calc(92.5vw + 438px)',
+											'sizes'=>'90px',
 											'classes'=>'hero_interior__bg-img absolute inset-0 object-cover -z-1',
 										)
 									); ?>
@@ -87,7 +87,7 @@ $authors = get_field('authors');
 					'lazy'=>false,
 					'attachment_id'=>$hero['image'],
 					'size'=>'original',
-					'sizes'=>'(min-width: 1040px) 100vw, (min-width: 740px) 140.71vw, (min-width: 400px) calc(118.44vw + 276px), calc(92.5vw + 438px)',
+					'sizes'=>'(min-width: 1024px) 50vw, 100vw',
 					'classes'=>'hero_interior__bg-img absolute inset-0 object-cover -z-1',
 				)
 			); ?>
