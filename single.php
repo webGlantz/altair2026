@@ -31,7 +31,7 @@ if (have_posts()) :
 			 
 		endif; ?>
 
-		<section class="component bg-white">
+		<section class="component single-post__wrapper">
 			<div class="container layout-grid gap-y-48">
 
 				<div class="single-post__share col-4 lg:col-2">

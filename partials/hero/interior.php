@@ -30,7 +30,7 @@ use glantz\core;
 		</div>
 	<?php endif; ?>
 
-	<div class="hero_interior__container relative z-1 container layout-grid items-start gap-24 <?=(!empty($hero['bg']) ? 'py-48 lg:py-96 xl:py-120' : 'mt-48 lg:mt-96 xl:mt-120')?> ">
+	<div class="hero_interior__container relative z-1 container layout-grid items-start gap-24 <?=(!empty($hero['bg']) ? 'py-48 lg:py-96 xl:py-120' : '')?> ">
 
 		<div class="hero_interior__content col-4 <?=($hero['image'] ? 'lg:col-7' : 'lg:col-6 lg:start-col-4')?> max-w-710 grid gap-12 lg:gap-24  <?=($hero['image'] ? '' : 'text-center')?> <?=(!empty($hero['bg']) ? 'text-white' : '')?>">
 			<h1 class=""><?=(isset($hero['headline']) ? $hero['headline'] : get_the_title())?></h1>
@@ -43,7 +43,7 @@ use glantz\core;
 
 		<?php if($hero['image']) : ?>
 			<!-- image -->
-			<div class="hero_interior__image relative col-3 lg:col-5 start-col-2 lg:start-col-8 ar-4:5">
+			<div class="hero_interior__image relative col-3 lg:col-5 xl:col-4 start-col-2 lg:start-col-8 xl:start-col-9 ar-4:5">
 				
 				<?php echo core::get_custom_srcset(
 					array(

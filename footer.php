@@ -14,26 +14,25 @@
 
 
 				<!-- footer -->
-				<footer class="f py-24 lg:py-72">
+				<footer class="f">
 					
-					<div class="container layout-grid gap-24 lg:gap-48 xl:gap-72 items-start">
+					<div class="container">
 						
-						<div class="f_left col-4 grid gap-24">
-							<?php 
-							include locate_template('partials/footer/logo-seo.php', false, false); 
-							include locate_template('partials/footer/contact.php', false, false);
-							?>
-						</div>
+						<?php include locate_template('partials/footer/logo.php', false, false); ?>
 
-						<div class="f_right col-4 lg:col-8 grid lg:block gap-24">
+						<div class="pb-gutter-y grid gap-48 lg:flex items-start lg:justify-between">
 							<?php 
+							include locate_template('partials/footer/cta.php', false, false);
 							include locate_template('partials/footer/quick-links.php', false, false);
-							include locate_template('partials/footer/newsletter.php', false, false);
-							include locate_template('partials/footer/utility.php', false, false);
+							include locate_template('partials/footer/social.php', false, false);
+							include locate_template('partials/footer/contact.php', false, false);
+				
 							?>
 						</div>
 					</div>
-					
+
+
+					<?php include locate_template('partials/footer/utility.php', false, false); ?>
 				</footer>
 		</div>
 

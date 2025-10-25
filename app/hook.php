@@ -301,7 +301,7 @@ class hook extends base\hook {
 		\register_nav_menus(array(
 			'header-primary-navigation'=>'Header Primary Navigation',
 			'footer-quick-links'=>'Footer Quick Links',
-			'footer-contact'=>'Footer Contact',
+			'footer-social'=>'Footer Social',
 			'footer-utility'=>'Footer Utility',
 		));
 	}
@@ -537,6 +537,7 @@ class hook extends base\hook {
 	    $query->set( 'showposts', -1 );
 	    $query->set('orderby', 'menu_order');
 	    $query->set('order','ASC');
+	    $query->set('post_status','publish');
 
 		return $query;
 	}

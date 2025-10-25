@@ -11,10 +11,10 @@ $form = get_field('footer_newsletter_form', 'options');
 
 ?>
 
-<div class="f_newsletter f_right__i">
+<div class="f_newsletter">
 
 	<?php if($headline) : ?>
-		<h2 class="t_body font-bold"><?=$headline?></h2>
+		<h2 class="t_body font-normal"><?=$headline?></h2>
 	<?php endif; ?>
 
 	<!-- form -->

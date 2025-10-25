@@ -28,44 +28,49 @@ echo CONTENT_CLOSE;
 
 			
 		<!-- contact information -->
-		<div class="c_form__info col-4 flex flex-col gap-12 lg:gap-24">
+		<div class="c_form__info col-4 lg:col-5 flex flex-col gap-48 lg:gap-60 t_body">
 
+			<div class="grid gap-12 lg:gap-24">
+				<?php if(!empty($fields['phone_number'])) : ?>
+					<!-- phone -->
+					<a href="tel:<?=$fields['phone_number']?>" class="contact-item c_form__info-item flex items-start gap-12 group">
+						<img class="i" src="<?=THEME_URL?>assets/svg/phone-icon.svg" alt="" />
+						<span class="hover:underline"><?=$fields['phone_number']?></span>
+					</a>
+				<?php endif; ?>
 
-			<?php if($fields['phone_number']) : ?>
-				<!-- phone -->
-				<a href="tel:<?=$fields['phone_number']?>" class="contact-item c_form__info-item flex items-start gap-12 group">
-					<i class="fa-sharp fa-fw fa-solid fa-phone"></i>
-					<span class="font-bold hover:underline"><?=$fields['phone_number']?></span>
-				</a>
-			<?php endif; ?>
+				<?php if(!empty($fields['email_address'])) : ?>
+					<!-- email -->
+					<a href="mailto:<?=$fields['email_address']?>" class="contact-item c_form__info-item flex items-start gap-12 group">
+						<img class="i" src="<?=THEME_URL?>assets/svg/envelope-icon.svg" alt="" />
+						<span class="hover:underline">Email us</span>
+					</a>
+				<?php endif; ?>
 
-			<?php if($fields['email_address']) : ?>
-				<!-- email -->
-				<a href="mailto:<?=$fields['email_address']?>" class="contact-item c_form__info-item flex items-start gap-12 group">
-					<i class="fa-sharp fa-fw fa-solid fa-envelope"></i>
-					<span class="font-bold hover:underline">Email us</span>
-				</a>
-			<?php endif; ?>
-
-			<?php if($fields['address']) : ?>
-				<!-- address -->
-				<a href="<?=$fields['google_maps_url']?>" class="contact-item c_form__info-item flex items-start gap-12 group" target="_blank">
-					<i class="fa-sharp fa-fw fa-solid fa-location-dot"></i>
-					<span class="font-bold hover:underline"><?=$fields['address']?></span>
-				</a>
-			<?php endif; ?>
-
-			<div class="c_form__map relative overflow-hidden ar ar-4:3">
-				<?=$fields['google_maps_embed_code']?>
+				<?php if(!empty($fields['address']) && !empty($fields['google_maps_url'])) : ?>
+					<!-- address -->
+					<a href="<?=$fields['google_maps_url']?>" class="contact-item c_form__info-item flex items-start gap-12 group" target="_blank">
+						<img class="i" src="<?=THEME_URL?>assets/svg/location-icon.svg" alt="" />
+						<span class="hover:underline"><?=$fields['address']?></span>
+					</a>
+				<?php endif; ?>
 			</div>
+
+			<?php if(!empty($fields['google_maps_embed_code'])) : ?>
+				<div class="c_form__map relative overflow-hidden ar ar-4:3">
+					<?=$fields['google_maps_embed_code']?>
+				</div>
+			<?php endif; ?>
 
 		</div>
 
 
 		<!-- form -->
-		<div class="p-36 lg:p-48 relative col-4 lg:col-7 xl:col-8">
-			<?=do_shortcode('[gravityform id="' . $fields['form'] . '" title="false" ajax="true"]')?>
-		</div>
+		<?php if(!empty($fields['form'])) : ?>
+			<div class="relative col-4 lg:col-7 xl:col-6 xl:start-col-7">
+				<?=do_shortcode('[gravityform id="' . $fields['form'] . '" title="false" ajax="true"]')?>
+			</div>
+		<?php endif; ?>
 	</div>
 
 		

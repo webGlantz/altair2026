@@ -20,20 +20,15 @@
 	.gfield_label,
 	.gfield_label_product,
 	.gform-field-label > .gfield_required {
-		@extend .t_h6;
+		@extend .t_body;
 		display: flex;
 		align-items: flex-start;
-		color: var(--midnight);
-	}
-
-	.gfield_label { 
-		margin-bottom: 24px;
-		padding-left: 12px; 
+		font-weight: 600;
+		color: var(--blue-dark);
 	}
 
 	.gform-field-label > .gfield_required {
 		margin-top: -0.2em;
-		color: var(--wood-beam);
 	}
 
 	// .gform-field-label--type-sub,
@@ -69,23 +64,15 @@
 	input[type="file"],
 	select,
 	textarea {
-		padding: 0 12px 6px 12px;
+		padding: 12px 0;
 		width: 100%;
 		background: transparent;
 		border-radius: 0;
 		border: 0;
-		border-bottom: 1px solid currentColor;
-		border-left: 1px solid currentColor;
+		border-bottom: 3px solid currentColor;
 		box-shadow: none;
 		font-size: 16px!important;
 		color: var(--midnight);
-
-		&:focus {
-			padding: 0 9px 3px 9px;
-			outline: 0;
-			box-shadow: none;
-			border-width: 3px;
-		}
 
 		&[aria-invalid=true] {
 			border-color: var(--error);
@@ -196,7 +183,22 @@
 
 		margin-bottom: 0;
 		margin-left: auto;
+		padding-left: 0;
+		padding-right: 0;
 		box-shadow: none;
 		border-radius: 0;
+		background: transparent;
+		color: var(--blue-dark);
+
+		&:before {
+			background-color: var(--blue-dark);
+		}
+
+		&:after {
+			font-family: 'Font Awesome 7 Free'!important;
+			font-weight: 900!important;
+			content: '\f061';
+			color: var(--blue-dark);
+		}
 	}
 }

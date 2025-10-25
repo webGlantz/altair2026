@@ -1,10 +1,10 @@
 {
-    "key": "group_68f7d168ea418",
-    "title": "Block - Image + Text",
+    "key": "group_68fa4f4856856",
+    "title": "Block - Infographic",
     "fields": [
         {
-            "key": "field_68f7d168ebb0c",
-            "label": "Image + Text",
+            "key": "field_68fa4f48589b9",
+            "label": "Infographic",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -21,32 +21,8 @@
             "endpoint": 0
         },
         {
-            "key": "field_68f7d168ebb19",
-            "label": "Layout",
-            "name": "layout",
-            "aria-label": "",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "33",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "left": "Start with Media on Left",
-                "right": "Start with Media on Right"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "allow_in_bindings": 1,
-            "layout": "vertical"
-        },
-        {
-            "key": "field_68f7d168f058d",
-            "label": "Image",
+            "key": "field_68fa4f48589be",
+            "label": "Background Image",
             "name": "image",
             "aria-label": "",
             "type": "image",
@@ -54,7 +30,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "100",
                 "class": "",
                 "id": ""
             },
@@ -71,28 +47,27 @@
             "preview_size": "thumbnail"
         },
         {
-            "key": "field_68f7d168f05cd",
-            "label": "Image Caption",
-            "name": "caption",
+            "key": "field_68fa4f48589c2",
+            "label": "Headline",
+            "name": "headline",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "33",
+                "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
             "maxlength": "",
-            "allow_in_bindings": 0,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_68f7d168ebb15",
+            "key": "field_68fa4f48589c6",
             "label": "Text",
             "name": "text",
             "aria-label": "",
@@ -110,6 +85,58 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_68fa4f5b833ef",
+            "label": "Infographic (Desktop)",
+            "name": "infographic_desktop",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_68fa4f74833f0",
+            "label": "Infographic (Mobile)",
+            "name": "infographic_mobile",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "thumbnail"
         }
     ],
     "location": [
@@ -117,7 +144,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "glantz\/image-text"
+                "value": "glantz\/infographic"
             }
         ]
     ],
@@ -131,5 +158,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1761234698
+    "modified": 1761235359
 }

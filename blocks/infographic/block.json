@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/infographic",
+	"title": "Infographic",
+	"description": "A custom block with an infographic.",
+	"category": "glantz-blocks",
+	"icon": "align-pull-left",
+	"keywords": ["infographic"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "infographic.php",
+		"postTypes": [
+			"page"
+		]
+	},
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.1.0"
+}

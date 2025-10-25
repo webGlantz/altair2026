@@ -48,8 +48,8 @@
 		&.has-img &__container { min-height: 500px; }
 		&.has-img &__content { align-self: center; }
 
-		&.has-img { margin-bottom: 360px; }
-		&__image { margin-bottom: -460px; }
+		&.has-img { margin-bottom: 140px; }
+		&__image { align-self: flex-end; margin-bottom: -240px; }
 		
 	}
 }

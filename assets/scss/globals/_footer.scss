@@ -1,6 +1,39 @@
 .f {
+
+	position: relative;
+	background: var(--blue-lightest);
+
+	&:before {
+		position: absolute;
+		z-index: -1;
+		top: calc(-2 * var(--gutter-y));
+		right: 0;
+		left: 0;
+		height: var(--gutter-y);
+		content: '';
+		background: linear-gradient(to top, var(--blue-lightest), rgba(255,255,255,0));
+	}
+
+	&:after {
+		position: absolute;
+		top: calc(-1 * var(--gutter-y));
+		right: 0;
+		left: 0;
+		height: var(--gutter-y);
+		content: '';
+		background: var(--blue-lightest);
+	}
+
+	margin-top: var(--gutter-y);
+
 	&_logo {
 		width: 150px; 
+	}
+
+	&_logo__wrapper {
+		margin-bottom: var(--gutter-y);
+		padding-bottom: var(--gutter-y);
+		border-bottom: 2px solid var(--blue-light);
 	}
 
 	#app & .gform-theme--framework {
@@ -21,17 +54,9 @@
 		input[type="file"],
 		select,
 		textarea {
-			padding-left: 12px!important;
-			padding-right: 24px!important;
-			height: 40px;
+			padding: 8px 36px 8px 12px!important;
 			border: 0;
-			border-bottom: 1px solid currentColor;
-			color: var(--white);
-
-			&:focus {
-				border-width: 1px;
-				outline: auto;
-			}
+			border: 2px solid currentColor;
 		}
 
 		form {
@@ -44,29 +69,23 @@
 		.gform_footer {
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: 10px;
 			margin-top: 0;
 		}
 
 		.gform_button {
-			padding: 0 12px;
-			width: 44px;
-			height: 40px;
 			font-size: 0;
+			height: 41.5px;
+
+			&:before { display: none; }
 
 			&:after {
 				margin-left: -0.4em;
-				font-family: "Font Awesome 6 Pro"!important;
-				font-weight: 300;
+				font-family: "Font Awesome 7 Free"!important;
+				font-weight: 900;
 				font-size: 16px;
-				content: '\e09f';
+				content: '\f061';
 				transition: all var(--time);
-			}
-
-			&:hover,
-			.group:hover & {
-
-				&:after { transform: rotate(45deg); color: var(--midnight)!important; }
 			}
 		}
 	}
@@ -74,24 +93,17 @@
 
 	@media (min-width: $screen_lg) {
 		&_logo {
-			width: 200px; 
+			width: 470px; 
 		}
 
-		&_right {
-			margin-top: -36px;
-			column-count: 2;
-			gap: 0;
-
-			&__i {
-				break-inside: avoid;
-				padding-top: 36px; 
-			}
+		&_logo__wrapper {
+			margin-top: 48px;
+			margin-bottom: 48px;
+			padding-bottom: 96px;
 		}
-	}
 
-	@media (min-width: $screen_xl) {
-		&_right {
-			column-count: 3;
+		&_cta {
+			flex: 0 0 25%;
 		}
 	}
 }

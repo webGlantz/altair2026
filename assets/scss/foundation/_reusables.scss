@@ -9,7 +9,7 @@
 	max-width: 1440px;
 	width: 100%;
 
-	// &--xxs { max-width: 600px; }
+	&--xxs { max-width: 790px; }
 	&--xs { max-width: 880px; }
 	&--sm { max-width: 980px; }
 	&--md { max-width: 1216px; }
@@ -29,6 +29,14 @@
 		margin-bottom: 0;
 		padding-top: 48px;
 		padding-bottom: 48px;
+	}
+
+	&.bg-blue,
+	&.bg-grey {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: var(--gutter-y);
+		padding-bottom: var(--gutter-y);
 	}
 }
 
@@ -52,10 +60,10 @@
 	align-items: center;
 	justify-content: space-between;
 	gap: 12px;
-	padding-bottom: 1em;
+	padding-bottom: 0.66em;
 	line-height: 1.5;
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
 
 	&:before {
 		position: absolute;
@@ -103,7 +111,32 @@
 		position: absolute;
 		top: 50%;
 		right: 0;
+		height: 1em;
+		line-height: 1;
 		transform: translateY(-50%);
+	}
+
+	&__header-mobile,
+	&__header-desktop {
+		input:not([type="checkbox"]):not([type="radio"]):not(.bw-datepicker__input) {
+			padding: 12px 56px 12px 24px;
+			border: 1px solid var(--white);
+			height: auto;
+			font-size: 16px;
+		}
+
+		button {
+			right: 12px;
+		}
+	}
+
+	@media (min-width: $screen_lg) {
+		&__header-mobile,
+		&__header-desktop {
+			input:not([type="checkbox"]):not([type="radio"]):not(.bw-datepicker__input) {
+				font-size: 18px;
+			}
+		}
 	}	
 }
 
@@ -127,6 +160,11 @@
 	.group:hover & img {
 		transform: scale(1.1);
 	}
+}
+
+.i {
+	width: 1em;
+	height: 1em;
 }
 
 .select-ui {
@@ -153,5 +191,5 @@
 }
 
 .contact-item {
-	i { margin-top: 0.15em; }
+	i, .i { margin-top: 0.3em; }
 }

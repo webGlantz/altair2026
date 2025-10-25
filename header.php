@@ -9,11 +9,10 @@
 use glantz\core;
 
 global $hero;
-global $header_btn;
 
-$header_btn = get_field('navigation_button', 'options');
-$utility = get_field('utility_links', 'options');
-$notification = get_field('banner_text', 'options');
+$phone = get_field('phone', 'options');
+$careers = get_field('careers_link', 'options');
+$client_login = get_field('client_login', 'options');
 
 ?><!DOCTYPE html>
 <html lang="en-US">
@@ -68,36 +67,21 @@ $notification = get_field('banner_text', 'options');
 			<!-- header -->
 			<header class="h relative" :class="{ 'has:menu' : menu }" >
 
+				<div class="container flex justify-between items-center py-20 lg:pt-36 lg:pb-72">
 
-				<?php if($notification) : ?>
-					<div class="lg:hidden py-8">
-						<div class="container">
-							<?php include locate_template('partials/header/notification.php', false, false); ?>
-						</div>
-					</div>
-				<?php endif; ?>
-
-				<div class="hidden lg:block py-8">
-					<div class="container">
-						<?php include locate_template('partials/header/utility.php', false, false); ?>
-					</div>
-				</div>
-
-				<div class="container flex justify-between items-center py-20">
-
-					<a href="<?=site_url()?>" class="h_logo logo" title="Home - <?=get_bloginfo('name')?>" aria-label="Home - <?=get_bloginfo('name')?>">
-						<img src="<?=THEME_URL?>/assets/svg/competition-roofing-logo.svg" width="165" height="38" class="h_logo__color" alt="<?=get_bloginfo('name')?> Logo" />
-					</a>
+					<?php include locate_template('partials/header/logo.php', false, false); ?>
 
 					<button @click="toggleMenu()" class="h_menu-toggle lg:hidden flex flex-col justify-between items-center" :class="menu ? 'is-active' : ''" aria-label="Show/Hide Menu" title="Show/Hide Menu">
 						<span></span>
 					</button>
 
-					<?php 
+					<nav class="h_nav lg:grid lg:gap-36" :class="{ 'is-active' : menu }">
+						<?php 
+						include locate_template('partials/header/utility.php', false, false);
+						include locate_template('partials/header/primary.php', false, false); 
 
-					include locate_template('partials/header/primary.php', false, false); 
-
-					?>
+						?>
+					</nav>
 
 				</div>
 			</header>

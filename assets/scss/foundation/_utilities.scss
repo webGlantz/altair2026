@@ -259,6 +259,7 @@
 //----------------------- 
 .px-gutter-x { padding-right: var(--gutter-x); padding-left: var(--gutter-x); }
 .py-gutter-y { padding-top: var(--gutter-x); padding-bottom: var(--gutter-x); }
+.pb-gutter-y { padding-bottom: var(--gutter-y); }
 
 @each $size in $sizing {
 	.p-#{$size} { padding: #{$size}px; }
@@ -300,9 +301,10 @@
 //-----------------------
 // WIDTH
 //-----------------------
-// .max-w-220 { max-width: 220px; }
+.max-w-320 { max-width: 320px; }
 .max-w-460 { max-width: 460px; }
 .max-w-560 { max-width: 560px; }
+.max-w-640 { max-width: 640px; }
 .max-w-710 { max-width: 710px; }
 .max-w-860 { max-width: 860px; }
 .w-full { width: 100%; }

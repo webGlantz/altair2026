@@ -3,11 +3,11 @@
 }
 
 .h_logo {
-	width: 120px;
+	width: 160px;
 	transition: all var(--time);
 
 	@media (min-width: $screen_lg) {
-		width: 150px;
+		width: 265px;
 	}
 }
 
@@ -21,7 +21,8 @@
 	margin-top: 1px;
 	padding: 24px var(--gutter-x);
 	height: calc(100dvh - var(--wp-admin--admin-bar--height, 0px) - var(--header-height, 0px));
-	background: var(--white);
+	background: var(--blue);
+	color: var(--white);
   	opacity: 0;
   	visibility: hidden;
   	transition: all var(--time);
@@ -31,8 +32,18 @@
   		visibility: visible;
   	}
 
-  	&__ul {
+  	&__utility {
+  		padding-bottom: 24px;
+  		margin-bottom: 24px;
+  		border-bottom: 1px solid currentColor;
+  		font-weight: 600;
 
+  		.i { margin-top: 0.1em; }
+  	}
+
+  	&__primary {
+  		font-size: 22px;
+  		line-height: 1.5;
   	}
 
   	@media (min-width: $screen_lg) {
@@ -44,57 +55,44 @@
   		opacity: 1;
   		visibility: visible;
   		background: transparent;
+  		color: var(--blue-dark);
+
+  		&__utility {
+  			padding-bottom: 0;
+  			margin-bottom: 0;
+  			border-bottom: 0;
+  		}
+
+  		&__primary {
+  			padding-bottom: 24px;
+  			border-bottom: 2px solid var(--blue-light);
+  			font-weight: 700;
+  			font-size: 18px;
+  		}
+
+  		&__primary-i {
+  			position: relative;
+
+  			&:before {
+  				position: absolute;
+  				right: 0;
+  				left: 0;
+  				bottom: -26px;
+  				height: 0;
+  				background: var(--blue);
+  				content: '';
+  				transition: all var(--time);
+  			}
+
+  			&:hover:before {
+				height: 4px;
+			}
+
+			&.is-active:before {
+				height: 8px;
+			}
+  		}
   	}
-}
-
-.h_utility {
-	padding-bottom: 20px;
-	border-bottom: 1px solid var(--midnight);
-
-	@media (min-width: $screen_lg) {
-		padding-bottom: 0;
-		border: 0;
-		font-size: 14px;
-	}
-}
-
-.h_primary {
-	&__i {
-		padding: 15px 0; 
-		border-bottom: 1px solid var(--midnight);
-	}
-
-	@media (min-width: $screen_lg) {
-		&__i {
-			padding: 0;
-			border: 0;
-		}
-	}
-}
-
-.h_subnav {
-
-	display: grid;
-	margin-top: 15px;
-	padding-left: 20px;
-	gap: 15px;
-
-	&__toggle {
-		display: flex; 
-		gap: 8px; 
-		align-items: center;
-	}
-
-	&__toggle i { transition: all var(--time); }
-
-	&__toggle.is-active i { transform: rotate(180deg); }
-
-	@media (min-width: $screen_lg) {
-		position: absolute;
-		padding: 24px;
-		background: white;  
-	}
-
 }
 
 .h_menu-toggle {
@@ -128,8 +126,8 @@
 		top: 100%;
 		right: 0;
 		left: 0;
-		margin-top: 1px;
 		padding: 24px 0;
-		background: var(--white);
+		background: var(--blue);
+		color: var(--white);
 	}
 }

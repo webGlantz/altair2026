@@ -19,7 +19,7 @@ $authors = get_field('authors');
 ?>
 
 <!-- hero: post -->
-<section class="hero hero_post relative z-1 text-white" style="--bg: <?=(!empty($cats) && in_array($cats[0]->term_id, $exclude) ? 'var(--blue)' : 'var(--green)')?>">
+<section class="hero hero_post relative z-1 text-white <?=(empty($hero['image']) ? 'no-img' : '')?>" style="--bg: <?=(!empty($cats) && in_array($cats[0]->term_id, $exclude) ? 'var(--blue)' : 'var(--green)')?>">
 
 	
 

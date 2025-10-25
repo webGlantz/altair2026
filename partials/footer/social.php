@@ -1,21 +1,21 @@
 <?php
 /**
- * Footer - Quick Links
+ * Footer - Social
  *
  * @package Altair Advisers
  * @author Glantz <web@glantz.net>
  */
 
-$links = glantz\core::get_nav('footer-quick-links'); ?>
-		
+$links = glantz\core::get_nav('footer-social'); ?>
 
-<div class="grid gap-20">
-	<div class="t_h5"><?=_e('Quick Links', TEXTDOMAIN)?></div>
+<div class="grid gap-20 items-start">
+	<div class="t_h5"><?=_e('Stay in Touch', TEXTDOMAIN)?></div>
 
 	<ul class="f__list grid gap-20 t_body">
+		
 		<?php foreach($links as $i) : ?>
 
-			<div class="f_nav__li">
+			<div class="f_nav__li grid">
 
 				<a href="<?=$i['url']?>" class="f_nav__a hover:underline <?=implode(' ', $i['classes'])?>" target="<?=$i['target']?>">
 					<?=$i['title']?>
@@ -23,7 +23,7 @@ $links = glantz\core::get_nav('footer-quick-links'); ?>
 
 			</div>
 		<?php endforeach; ?>
-	</ul>
 
+	</ul>
 </div>
 
