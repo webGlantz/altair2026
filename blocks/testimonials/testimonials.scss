@@ -1,0 +1,38 @@
+@import '../../assets/scss/foundation/_variables.scss';
+
+
+.c_testimonials {
+
+	.slick-slide {
+		padding: 0 var(--gutter-x);
+		width: 100vw;
+		max-width: 906px; 
+	}
+
+	&__content { max-width: 1290px; }
+
+
+	&__attr {
+		border: 1px solid var(--blue-light);
+		border-top-width: 0;
+	}
+
+	&__quote {
+		p:first-child:before { content: '\201C'; }
+		p:last-child:after { content: '\201D'; }
+	}
+
+	@media (min-width: $screen_lg) {
+
+		.slick-slide { padding: 0 18px; }
+
+		&__image { flex: 0 0 305px; }
+
+		&__attr {
+			border: 1px solid var(--blue-light);
+			border-left-width: 0;
+		}
+
+	
+	}
+}

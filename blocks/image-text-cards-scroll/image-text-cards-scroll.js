@@ -1,0 +1,16 @@
+document.addEventListener('alpine:init', () => {
+
+	Alpine.data('timeline', () => ({
+		
+		init() {
+
+		    if(this.$el) {
+		        var myScrollbar = this.$el.querySelector('.c_cards-scroll__grid').fakeScroll({
+		            track: 'smooth',
+		        });
+		    }
+
+		}
+		
+	}));
+});

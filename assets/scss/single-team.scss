@@ -32,7 +32,7 @@
 	}
 }
 
-.single-team {
+.c_single-team {
 
 	--gutter-y: 48px;
 
@@ -50,6 +50,5 @@
 	}
 }
 
-main {
-	background: var(--white);
-}
+body { background: var(--white); }
+.h { background: var(--blue-lightest); }

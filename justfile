@@ -50,7 +50,9 @@ blocks_dir := justfile_directory() + "/blocks"
 	just _js "{{ js_dir }}/accordion.js"
 	just _js "{{ js_dir }}/carousel.js"
 	just _js "{{ js_dir }}/core.js"
+	just _js "{{ js_dir }}/fakescroll.js"
 	just _js "{{ js_dir }}/libs.js"
+	just _js "{{ js_dir }}/slick.js"
 	find "{{ blocks_dir }}" -name "*.js" -type f -exec just _js {} "block-" \;
 
 	# SCSS.
@@ -59,6 +61,8 @@ blocks_dir := justfile_directory() + "/blocks"
 	just _scss "{{ scss_dir }}/core.scss"
 	just _scss "{{ scss_dir }}/feed-blog.scss"
 	just _scss "{{ scss_dir }}/feed-team.scss"
+	just _scss "{{ scss_dir }}/libs/fakescroll.scss"
+	just _scss "{{ scss_dir }}/libs/slick.scss"
 	just _scss "{{ scss_dir }}/single-post.scss"
 	just _scss "{{ scss_dir }}/single-team.scss"
 	find "{{ blocks_dir }}" -name "*.scss" -type f -exec just _scss {} "block-" \;

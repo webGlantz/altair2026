@@ -27,7 +27,7 @@ echo CONTENT_CLOSE;
 				'lazy'=>true,
 				'attachment_id'=>$fields['image'],
 				'size'=>'original',
-				'sizes'=>'(min-width: 680px) 100vw, (min-width: 540px) calc(55vw + 297px), calc(-65vw + 931px)',
+				'sizes'=>'100vw',
 				'classes'=>'c_infographic__bg-img absolute inset-0 object-cover w-full opacity-20',
 			)
 		); ?>
@@ -58,7 +58,7 @@ echo CONTENT_CLOSE;
 					'lazy'=>true,
 					'attachment_id'=>$fields['infographic_desktop'],
 					'size'=>'original',
-					'sizes'=>'(min-width: 680px) 100vw, (min-width: 540px) calc(55vw + 297px), calc(-65vw + 931px)',
+					'sizes'=>'(min-width: 1520px) 1290px, calc(75.22vw + 162px)',
 					'classes'=>'c_infographic__img hidden lg:block',
 				)
 			); ?>
@@ -68,7 +68,7 @@ echo CONTENT_CLOSE;
 					'lazy'=>true,
 					'attachment_id'=>$fields['infographic_mobile'],
 					'size'=>'original',
-					'sizes'=>'(min-width: 680px) 100vw, (min-width: 540px) calc(55vw + 297px), calc(-65vw + 931px)',
+					'sizes'=>'(min-width: 400px) 328px, 85vw',
 					'classes'=>'c_infographic__img lg:hidden',
 				)
 			); ?>

@@ -1,0 +1,75 @@
+@import '../../assets/scss/foundation/_variables.scss';
+
+.c_cards-scroll {
+
+	&__i {
+		flex: 0 0 calc(100vw - (2 * var(--gutter-x)));
+	}
+
+	&__content { min-width: var(--contentSize); }
+
+	&__image { aspect-ratio: 26 / 23; }
+
+	.fakeScroll__track {
+		width: 100%;
+		height: 1px;
+		overflow: hidden;
+
+		&:before {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			background-color: var(--blue-light);
+			content: '';
+			opacity: 0;
+		}
+	}
+
+	.fakeScroll__bar {
+		height: 1px;
+		background: var(--blue-dark);
+		opacity: 0;
+	}
+
+	.fakeScroll__content {
+		display: flex;
+		gap: 24px;
+		margin: 0 auto;
+		padding: 0 calc((50% - 720px) + var(--gutter-x));
+	}
+
+	.fakeScroll__controls { order: -1; }
+
+	.fakeScroll__navigation {
+		//font-size: 48px;
+	}
+
+	@media (min-width: $screen_lg) {
+
+		.fakeScroll__track:before, 
+		.fakeScroll__bar { opacity: 1; }
+
+		.fakeScroll__content { gap: 48px; }
+
+		&__i { flex: 0 0 75%; }
+
+		&__image { 
+			flex: 0 0 50%; 
+			max-width: 525px;
+			margin-right: 48px; 
+		}
+
+		&__slide-content { max-width: 525px; }
+
+		.fakeScroll__controls { order: 999; }
+	}
+
+	@media (min-width: $screen_xl) {
+
+		.fakeScroll__content { gap: 72px; }
+		
+	}
+	
+}

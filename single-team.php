@@ -38,10 +38,10 @@ if (have_posts()) :
 			 
 		endif; ?>
 
-		<section class="single-team component">
+		<section class="c_single-team component">
 			<div class="container layout-grid gap-y-48 items-start">
 
-				<aside class="single-team__aside col-4 grid gap-24 lg:gap-48">
+				<aside class="c_single-team__aside col-4 grid gap-24 lg:gap-48">
 					<?php foreach($sections as $label=>$content) :
 
 						if(empty($content)) :

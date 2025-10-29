@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/image-text-cards-scroll",
+	"title": "Image + Text Cards Scroll",
+	"description": "A custom block with a horizontally scrolling section.",
+	"category": "glantz-blocks",
+	"icon": "backup",
+	"keywords": ["scroll"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "image-text-cards-scroll.php",
+		"postTypes": [
+			"page"
+		]
+	},
+	"style": [ "fakescroll", "image-text-cards-scroll"],
+	"script": [ "fakescroll", "image-text-cards-scroll"],
+	"supports": {
+		"align": "false",
+		"mode": "false"
+	},
+	"version": "1.0.0"
+}

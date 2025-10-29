@@ -75,8 +75,8 @@
                 "id": ""
             },
             "choices": {
-                "left": "Start with Media on Left",
-                "right": "Start with Media on Right"
+                "right": "Start with Media on Left",
+                "left": "Start with Media on Right"
             },
             "default_value": "",
             "return_format": "value",
@@ -315,5 +315,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760492552
+    "modified": 1761766214
 }

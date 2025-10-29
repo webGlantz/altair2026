@@ -25,27 +25,6 @@
             "parent_repeater": "field_67bcb260a30c7"
         },
         {
-            "key": "field_68239e03284fd",
-            "label": "Company",
-            "name": "company",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_67d452f9e877a",
             "label": "Position",
             "name": "position",
@@ -66,48 +45,6 @@
             "prepend": "",
             "append": "",
             "parent_repeater": "field_67bcb260a30c7"
-        },
-        {
-            "key": "field_68239e0b284fe",
-            "label": "Project Type",
-            "name": "project_type",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68239e11284ff",
-            "label": "Location",
-            "name": "location",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -128,5 +65,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747164720
+    "display_title": "",
+    "modified": 1761673958
 }

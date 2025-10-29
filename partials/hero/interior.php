@@ -23,7 +23,7 @@ use glantz\core;
 					'lazy'=>false,
 					'attachment_id'=>$hero['bg'],
 					'size'=>'original',
-					'sizes'=>'(min-width: 1040px) 100vw, (min-width: 740px) 140.71vw, (min-width: 400px) calc(118.44vw + 276px), calc(92.5vw + 438px)',
+					'sizes'=>'100vw',
 					'classes'=>'hero_interior__bg-img absolute inset-0 object-cover -z-1 opacity-50',
 				)
 			); ?>

@@ -17,10 +17,10 @@ echo CONTENT_CLOSE;
 ?>
 
 <!-- component: careers embed -->
-<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_embed relative z-1 grid gap-48 lg:gap-60 bg-grey text-center">
+<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_embed relative z-1 grid gap-48 lg:gap-60 bg-grey">
 
 
-	<div class="c_embed__container container container--xs grid gap-12 lg:gap-24">
+	<div class="c_embed__container container container--xs grid gap-12 lg:gap-24  text-center">
 
 		<!-- headline -->
 		<?php if($fields['headline']) : ?>

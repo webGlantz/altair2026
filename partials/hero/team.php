@@ -29,7 +29,7 @@ $contact = array_filter($contact, fn($_, $key) => !empty($contact[$key]), ARRAY_
 	<div class="relative z-1 container layout-grid gap-24 lg:gap-y-96 items-start lg:items-center">
 
 		<!-- image -->
-		<div class="hero_team__image relative -z-1 col-4 ar-1:1">
+		<div class="hero_team__image relative -z-1 col-4 ar-6:7">
 			
 			<?php echo core::get_custom_srcset(
 				array(

@@ -182,6 +182,22 @@ class hook extends base\hook {
 			\VERSION,
 			true
 		);
+
+		\wp_register_script(
+			'slick',
+			\get_stylesheet_directory_uri() . '/assets/js/slick.min.js',
+			array('jquery'),
+			\VERSION,
+			true
+		);
+
+		\wp_register_script(
+			'fakescroll',
+			\get_stylesheet_directory_uri() . '/assets/js/fakescroll.min.js',
+			array('jquery'),
+			\VERSION,
+			true
+		);
 	}
 
 	/**
@@ -242,6 +258,20 @@ class hook extends base\hook {
 		\wp_register_style(
 			'feed-team',
 			\get_stylesheet_directory_uri() . '/assets/css/feed-team.min.css',
+			array(),
+			\VERSION,
+		);
+
+		\wp_register_style(
+			'slick',
+			\get_stylesheet_directory_uri() . '/assets/css/slick.min.css',
+			array(),
+			\VERSION,
+		);
+
+		\wp_register_style(
+			'fakescroll',
+			\get_stylesheet_directory_uri() . '/assets/css/fakescroll.min.css',
 			array(),
 			\VERSION,
 		);

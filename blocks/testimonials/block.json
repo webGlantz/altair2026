@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"name": "glantz/testimonials",
+	"title": "Testimonials",
+	"description": "A custom block with testimonials.",
+	"category": "glantz-blocks",
+	"icon": "align-pull-left",
+	"keywords": ["quote", "carousel"],
+	"acf": {
+		"mode": "edit",
+		"renderTemplate": "testimonials.php",
+		"postTypes": [
+			"page"
+		]
+	},
+	"style": ["slick", "testimonials"],
+	"script": ["slick", "testimonials"],
+	"supports": {
+		"align": "false",
+		"anchor": "true",
+		"mode": "false"
+	},
+	"version": "1.2.0"
+}
