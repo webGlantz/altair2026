@@ -76,7 +76,7 @@ use glantz\core;
 				); 
 
 			elseif($hero['video'] && 'video' === $hero['type']) : ?>
-				<video class="hero_home__video absolute -z-1 inset-0 w-full h-full object-cover -z-1" playsline autoplay loop muted x-ref="video">
+				<video class="hero_home__video absolute -z-1 inset-0 w-full h-full object-cover -z-1" playsinline autoplay loop muted x-ref="video">
 					<source type="video/mp4" src="<?=$hero['video']?>" />
 				</video>
 
