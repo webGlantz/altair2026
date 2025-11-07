@@ -35,7 +35,7 @@ echo CONTENT_CLOSE;
 			<?php endif; ?>
 		</div>
 
-		<div>
+		<div class="grid gap-48 lg:gap-0">
 			<?php foreach($fields['items'] as $index=>$i) : ?>
 
 				<!-- item -->

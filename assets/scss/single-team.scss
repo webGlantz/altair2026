@@ -15,7 +15,9 @@
 
 	&__image { 
 		order: 9999; 
-		margin-bottom: -180px; }
+		margin-bottom: -180px; 
+		max-width: 75%;
+	}
 
 	@media (min-width: $screen_lg) {
 		padding: 84px 0;
@@ -24,6 +26,7 @@
 			order: 0;
 			align-self: flex-end;
 		 	margin-bottom: -180px; 
+		 	max-width: none;
 		}
 	}
 

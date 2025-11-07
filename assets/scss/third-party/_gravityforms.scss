@@ -173,7 +173,9 @@
 	// }
 
 	.gform_confirmation_message {
-		@extend .t_h4;
+		@extend .t_h6;
+		margin-top: 1em;
+		max-width: 260px;
 	}
 
 	.gform_button,

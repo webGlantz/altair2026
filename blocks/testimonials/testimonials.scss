@@ -32,7 +32,12 @@
 			border: 1px solid var(--blue-light);
 			border-left-width: 0;
 		}
+	}
 
-	
+
+	@media (max-width: #{$screen_lg}) {
+		.t_h5 {
+			font-size: 22px;
+		}
 	}
 }

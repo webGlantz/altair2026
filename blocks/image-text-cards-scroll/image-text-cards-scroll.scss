@@ -4,6 +4,8 @@
 
 	&__i {
 		flex: 0 0 calc(100vw - (2 * var(--gutter-x)));
+		&:first-child { margin-left: var(--gutter-x); }
+		&:last-child { margin-right: var(--gutter-x); }
 	}
 
 	&__content { min-width: var(--contentSize); }
@@ -53,7 +55,11 @@
 
 		.fakeScroll__content { gap: 48px; }
 
-		&__i { flex: 0 0 75%; }
+		&__i { 
+			flex: 0 0 75%; 
+			&:first-child { margin-left: 0; } 
+			&:last-child { margin-right: 0; }
+		}
 
 		&__image { 
 			flex: 0 0 50%; 

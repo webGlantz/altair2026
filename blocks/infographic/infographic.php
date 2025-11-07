@@ -69,7 +69,7 @@ echo CONTENT_CLOSE;
 					'attachment_id'=>$fields['infographic_mobile'],
 					'size'=>'original',
 					'sizes'=>'(min-width: 400px) 328px, 85vw',
-					'classes'=>'c_infographic__img lg:hidden',
+					'classes'=>'c_infographic__img lg:hidden mx-auto',
 				)
 			); ?>
 		</div>

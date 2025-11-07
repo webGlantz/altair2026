@@ -46,7 +46,7 @@ echo CONTENT_CLOSE;
 
 						<div class="grid gap-20 w-full">
 							<!-- image -->
-							<div class="c_service-card__image absolute inset-0 -z-1 zoom-hover">
+							<div class="c_service-card__image absolute inset-0 -z-1">
 								
 								<?php echo core::get_custom_srcset(
 									array(

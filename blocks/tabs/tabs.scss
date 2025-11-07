@@ -34,4 +34,9 @@
 		background: var(--rust);
 		color: var(--white);
 	}
+
+	@media (max-width: #{$screen_lg - 1}) {
+		flex: 1 1 50%;
+	}
+
 }
