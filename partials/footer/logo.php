@@ -11,7 +11,7 @@
 
 <!-- footer logo -->
 <div class="f_logo__wrapper">
-	<a href="<?=site_url()?>" class="f_logo logo mx-auto" title="Home - <?=get_bloginfo('name')?>" aria-label="Home - <?=get_bloginfo('name')?>">
+	<a href="<?=site_url()?>" data-aos="fade-up" class="f_logo logo mx-auto" title="Home - <?=get_bloginfo('name')?>" aria-label="Home - <?=get_bloginfo('name')?>">
 		<svg class="f_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 57.14">
 		  <path fill="currentColor" d="M26.7,56.79c-.19,0-.35-.11-.44-.28l-13.56-27.48c-.08-.16-.08-.35,0-.51L26.22.75c.17-.36.71-.36.89,0l13.54,27.76c.08.16.08.35,0,.51l-13.5,27.48c-.09.17-.26.28-.44.28h-.01ZM13.7,28.77l12.99,26.33,12.93-26.33L26.66,2.17l-12.96,26.6Z"/>
 		  <path fill="currentColor" d="M26.65,44.12c-.08,0-.16-.02-.24-.07L.7,29.25c-.16-.1-.27-.28-.27-.48s.1-.39.27-.48l25.77-14.91c.15-.09.32-.09.47,0l25.57,14.91c.16.1.26.28.26.48s-.1.38-.27.48l-25.63,14.81c-.07.04-.15.07-.24.07h.02ZM2,28.77l24.64,14.2,24.56-14.2-24.51-14.29L2,28.77Z"/>

@@ -32,7 +32,7 @@ use glantz\core;
 
 	<div class="hero_interior__container relative z-1 container layout-grid items-start gap-24 <?=(!empty($hero['bg']) ? 'py-48 lg:py-96 xl:py-120' : '')?> ">
 
-		<div class="hero_interior__content col-4 <?=($hero['image'] ? 'lg:col-7' : 'lg:col-6 lg:start-col-4')?> max-w-710 grid gap-12 lg:gap-24  <?=($hero['image'] ? '' : 'text-center')?> <?=(!empty($hero['bg']) ? 'text-white' : '')?>">
+		<div class="hero_interior__content col-4 <?=($hero['image'] ? 'lg:col-7' : 'lg:col-6 lg:start-col-4')?> max-w-710 grid gap-12 lg:gap-24  <?=($hero['image'] ? '' : 'mx-auto text-center')?> <?=(!empty($hero['bg']) ? 'text-white' : '')?>">
 			<h1 class=""><?=(isset($hero['headline']) ? $hero['headline'] : get_the_title())?></h1>
 
 			<!-- text -->

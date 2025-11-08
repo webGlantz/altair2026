@@ -37,6 +37,7 @@
 
 	.fakeScroll__content {
 		display: flex;
+		align-items: flex-start;
 		gap: 24px;
 		margin: 0 auto;
 		padding: 0 calc((50% - 720px) + var(--gutter-x));

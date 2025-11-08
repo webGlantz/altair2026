@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// WP Clean.
 	wpClean();
 	headerHeight();
+	AOS.init();
 
 });
 

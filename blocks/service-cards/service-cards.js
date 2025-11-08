@@ -3,7 +3,7 @@ document.addEventListener('alpine:init', () => {
 
 		hover: false,
 		size: 0,
-		breakpoint: 1024,
+		breakpoint: 1280,
 		
 		isShown() {
 			if(true === this.hover || this.breakpoint > this.size) {

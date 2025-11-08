@@ -75,7 +75,7 @@ echo CONTENT_CLOSE;
 						<li class="c_testimonials__slide">
 							
 							<div class="lg:flex">
-								<div class="c_testimonials__image relative z-1 ar-3:2 lg:ar-4:5">
+								<div class="c_testimonials__image relative z-1 ar-1:1 lg:ar-4:5">
 									<?php echo core::get_custom_srcset(
 										array(
 											'lazy'=>true,

@@ -56,7 +56,7 @@ echo CONTENT_CLOSE; ?>
 					</div>
 				<?php endif; ?>
 
-				<div class="c_cards-scroll__slide-content grid gap-24 py-24 lg:py-0 self-center">
+				<div class="c_cards-scroll__slide-content grid gap-24 py-24 lg:pt-48 lg:pb-0 self-start">
 
 					<?php if(!empty($i['eyebrow'])) : ?>
 						<div class="t_label text-rust"><?=$i['eyebrow']?></div>

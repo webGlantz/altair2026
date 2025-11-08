@@ -309,6 +309,10 @@
 .max-w-860 { max-width: 860px; }
 .w-full { width: 100%; }
 
+@media (min-width: $screen_lg) {
+	.lg\:max-w-710 { max-width: 710px; }
+}
+
 
 //-----------------------
 // HEIGHT

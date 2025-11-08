@@ -26,7 +26,7 @@ $authors = get_field('authors');
 	<div class="relative z-1 container layout-grid gap-24 lg:gap-y-96">
 
 
-		<div class="hero-top hero_interior__top hero_post__top relative col-4 lg:col-8 grid gap-24 lg:gap-36 py-48 lg:py-60 lg:py-72 px-gutter-x lg:px-0 max-w-710">
+		<div class="hero-top hero_interior__top hero_post__top relative col-4 lg:col-8 grid gap-24 lg:gap-36 py-48 lg:py-60 lg:py-72 px-gutter-x lg:px-0 lg:max-w-710">
 			
 			<?php if($categories) : ?>
 				<!-- category -->
