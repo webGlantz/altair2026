@@ -83,7 +83,7 @@ if (have_posts()) :
 					'image'=>get_post_thumbnail_id($post->ID),
 					'url'=>get_permalink(),
 					'class'=>'',
-					'size'=>'col-4 lg:col-3',
+					'size'=>'col-4 md:col-2 lg:col-3',
 					'cats'=>wp_list_pluck($cats, 'term_id', null),
 					'position'=>get_field('position', $post->ID),
 				);

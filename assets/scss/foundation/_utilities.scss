@@ -75,6 +75,13 @@
 .start-col-3 { grid-column-start: 3; }
 .start-col-4 { grid-column-start: 4; }
 
+@media (min-width: $screen_md) {
+	.md\:col-1 { grid-column-end: span 1; }
+	.md\:col-2 { grid-column-end: span 2; }
+	.md\:col-3 { grid-column-end: span 3; }
+	.md\:col-4 { grid-column-end: span 4; }
+}
+
 @media (min-width: $screen_lg) {
 	.lg\:col-1 { grid-column-end: span 1; }
 	.lg\:col-2 { grid-column-end: span 2; }
