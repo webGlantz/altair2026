@@ -1,6 +1,14 @@
 @import '../../assets/scss/foundation/_variables.scss';
 
 .c_ac {
+	&__content {
+		margin-bottom: var(--gutter-y);
+	}
+	&__item {
+		@media (min-width: $screen_lg) {
+			min-height: 522px;
+		}
+	}
 	&__image:before {
 		position: absolute;
 		inset: 0;
@@ -56,5 +64,7 @@
 		}
 	}
 }
+
+
 
 //lg:mr-24 xl:mr-60

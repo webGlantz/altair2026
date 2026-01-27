@@ -115,6 +115,10 @@ h6,
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 
+	span {
+		margin-right: 6px;
+	}
+
 	&--lg { font-size: 14px; font-weight: 600; }
 
 	@media (min-width: $screen_lg) {
