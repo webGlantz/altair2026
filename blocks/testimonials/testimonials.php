@@ -41,7 +41,7 @@ echo CONTENT_CLOSE;
 
 			<!-- headline -->
 			<?php if($fields['headline']) : ?>
-				<h2 class="c_testimonials__headline col-4 lg:col-5">
+				<h2 class="c_testimonials__headline col-4 lg:col-5 pr-96">
 					<?=$fields['headline']?>
 				</h2>
 			<?php endif; ?>

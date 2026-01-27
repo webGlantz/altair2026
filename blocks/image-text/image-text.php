@@ -39,7 +39,7 @@ $fields = (!empty($data) ? $data : get_fields());
 		
 	<div class="c_image-text__content relative z-1 col-4 lg:col-6 lg:start-col-7 flex flex-col gap-24 self-center">
 		
-			<div  class="grid gap-12 lg:gap-24 lg:mb-24 max-w-560">
+			<div  class="grid gap-12 lg:gap-24 lg:mb-24 max-w-500">
 
 				<!-- text -->
 				<?php if($fields['text']) : ?>
