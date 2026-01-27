@@ -24,7 +24,7 @@ use glantz\core;
 
 			<!-- text -->
 			<?php if($hero['text']) : ?>
-				<div class="hero_home__text max-w-460 t_wysiwyg t_body"><?=$hero['text']?></div>
+				<div class="hero_home__text max-w-480 t_wysiwyg t_body"><?=$hero['text']?></div>
 			<?php endif; ?>
 
 			<!-- buttons -->

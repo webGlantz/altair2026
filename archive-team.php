@@ -38,17 +38,12 @@ if (have_posts()) :
 		include locate_template('partials/hero/' . $hero['style'] . '.php', false, false);
 	endif; ?>
 
-	<section id="feed" class="c_feed relative z-1 grid my-48 lg:my-60 gap-48 lg:gap-60" x-data="{
-			active: 0,
-			isActive(ids) {
-				if(0 === parseInt(this.active) || ids.includes(parseInt(this.active))) {
-					return true;
-				}
-
-				return false;
-			}
-		}">
-
+	<section
+	id="feed"
+	class="c_feed relative z-1 grid my-48 lg:my-60 gap-48 lg:gap-60"
+	x-data="teamFeed()"
+	x-init="init()"
+	>
 		<div class="c_feed__filters container layout-grid gap-24">
 			
 			<!-- filters -->

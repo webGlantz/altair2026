@@ -22,7 +22,7 @@ echo CONTENT_CLOSE; ?>
 
 			<!-- headline -->
 			<?php if($fields['headline']) : ?>
-				<h2 class="c_cards-scroll__headline col-4 lg:col-6">
+				<h2 class="c_cards-scroll__headline col-4 lg:col-6 pr-96">
 					<?=$fields['headline']?>
 				</h2>
 			<?php endif; ?>

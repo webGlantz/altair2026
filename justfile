@@ -30,7 +30,6 @@ blocks_dir := justfile_directory() + "/blocks"
 
 	watchexec \
 		--postpone \
-		--no-shell \
 		--watch "{{ justfile_directory() }}" \
 		--debounce 1000 \
 		--exts js,scss \

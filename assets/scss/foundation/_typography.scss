@@ -29,7 +29,7 @@ h2,
 	letter-spacing: 0.02em;
 
 	@media (min-width: $screen_lg) {
-		font-size: 64px;
+		font-size: 60px;
 	}
 }
 
@@ -43,7 +43,7 @@ h3,
 	letter-spacing: 0.02em;
 
 	@media (min-width: $screen_lg) {
-		font-size: 45px;
+		font-size: 40px;
 	}
 }
 
@@ -114,6 +114,10 @@ h6,
 	line-height: 1.5;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+
+	span {
+		margin-right: 6px;
+	}
 
 	&--lg { font-size: 14px; font-weight: 600; }
 

@@ -24,14 +24,14 @@ echo CONTENT_CLOSE;
 		<div class="layout-grid gap-12 lg:gap-48">
 			<!-- headline -->
 			<?php if($fields['headline']) : ?>
-				<h2 class="c_ac__headline col-4 lg:col-6 lg:pr-24 xl:pr-60">
+				<h2 class="c_ac__headline col-4 lg:col-6 lg:pr-24 xl:pr-60 max-w-600">
 					<?=$fields['headline']?>
 				</h2>
 			<?php endif; ?>
 
 			<!-- text -->
 			<?php if($fields['text']) : ?>
-				<div class="c_ac__text relative z-1 col-4 lg:col-5 lg:start-col-7 self-end max-w-560 t_wysiwyg t_body t_body--sm"><?=$fields['text']?></div>
+				<div class="c_ac__text relative z-1 col-4 lg:col-5 lg:start-col-7 self-end max-w-600 t_wysiwyg t_body t_body--sm"><?=$fields['text']?></div>
 			<?php endif; ?>
 		</div>
 
@@ -58,7 +58,7 @@ echo CONTENT_CLOSE;
 			
 					<div class="c_ac__content relative z-1 col-4 lg:col-6 lg:start-col-7 flex flex-col gap-24 self-center">
 						
-							<div  class="grid gap-12 lg:gap-24 lg:mb-24 max-w-560">
+							<div  class="grid gap-12 lg:gap-24 lg:mb-24 max-w-500">
 
 
 								<!-- eyebrow -->
