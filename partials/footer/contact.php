@@ -15,7 +15,7 @@ $google_maps_url = get_field('google_maps_url', 'options');
 
 
 <div class="grid gap-20">
-	<div class="t_h5 flex gap-8 items-center"><a class="hover:underline" href="/contact"><?=_e('Contact Us', TEXTDOMAIN)?></a><i style="font-size: 18px;" class="fa fas fa-arrow-right"></i></div>
+	<div class="t_h5 flex gap-12 items-center"><a class="hover:underline" href="/contact"><?=_e('Contact Us', TEXTDOMAIN)?></a><i style="font-size: 18px;" class="fa fas fa-arrow-right"></i></div>
 
 	<ul class="f__list grid gap-20 t_body">
 

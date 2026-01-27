@@ -13,7 +13,7 @@
 
 	<?php if($item['image']) : ?>
 		<!-- image -->
-		<div class="loop-post__image relative overflow-hidden block w-full ar-1:1 zoom-hover bg-blue-light">
+		<div class="loop-post__image team-image relative overflow-hidden block w-full ar-1:1 zoom-hover bg-blue-light">
 			<?php echo glantz\core::get_custom_srcset(
 				array(
 					'lazy'=>true,

@@ -66,3 +66,41 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", (event) => {
 	headerHeight();
 });
+
+
+function teamFeed() {
+	return {
+	  active: 0,
+  
+	  isActive(ids) {
+		const active = parseInt(this.active);
+		return active === 0 || ids.includes(active);
+	  },
+  
+	  refreshAOS() {
+		this.$nextTick(() => {
+		  requestAnimationFrame(() => {
+			if (window.AOS) AOS.refreshHard();
+  
+			// footer logo: if it's already visible (common on short pages), force animate
+			const logo = document.querySelector('.f_logo[data-aos]');
+			if (!logo) return;
+  
+			const r = logo.getBoundingClientRect();
+			const inView = r.top <= window.innerHeight && r.bottom >= 0;
+  
+			if (inView) logo.classList.add('aos-animate');
+		  });
+		});
+	  },
+  
+	  init() {
+		// initial
+		this.refreshAOS();
+  
+		// on filter change
+		this.$watch('active', () => this.refreshAOS());
+	  },
+	};
+  }
+  
