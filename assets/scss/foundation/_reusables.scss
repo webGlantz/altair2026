@@ -76,10 +76,23 @@
 		transition: all var(--time);
 	}
 
+	i {
+		font-size: 16px;
+		transform: scale(1);
+		transition: transform var(--time);
+	}
+	
+
 	&:hover,
 	.group:hover & {
+
 		&:before { height: 7px; }
+
+		i {
+			transform: scale(1.1);
+		}
 	}
+
 
 	@media (min-width: $screen_lg) {
 		font-size: 18px;
