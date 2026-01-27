@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
 
   jQuery('.c_testimonials__track').slick({
-    //autoplay: true,
+    autoplay: true,
     arrows: true,
     centerMode: true,
     slidesToShow: 1,
