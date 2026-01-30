@@ -30,10 +30,15 @@ $client_login = get_field('client_login', 'options');
 		<script src="https://kit.fontawesome.com/e99d6951b8.js" crossorigin="anonymous"></script>
 		
 
-		<!-- #TODO - Google site verification -->
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGW8WC1H3C"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-
-		<!-- #TODO - Google Analytics / Tag Manager -->
+		gtag('config', 'G-DGW8WC1H3C');
+		</script>
 		
 
 		<?php
