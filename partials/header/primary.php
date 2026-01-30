@@ -34,6 +34,12 @@ $nav = glantz\core::get_nav('header-primary-navigation');
 			</a>
 		</li>
 	<?php endif; ?>
+		<!-- contact -->
+		<li class="h_nav__primary-i lg:hidden">
+			<a href="/contact" target="">		
+				Contact Us
+			</a>
+		</li>
 
 	<li class="h_search lg:hidden mt-24">
 		<?php 

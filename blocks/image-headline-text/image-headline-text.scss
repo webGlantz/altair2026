@@ -1,12 +1,11 @@
 @import '../../assets/scss/foundation/_variables.scss';
 
 .c_ac {
-	&__content {
-		margin-bottom: var(--gutter-y);
-	}
+
 	&__item {
 		@media (min-width: $screen_lg) {
 			min-height: 522px;
+			align-items: center;
 		}
 	}
 	&__image:before {
@@ -44,7 +43,13 @@
 		&--right &__item:nth-child(2n) &__content,
 		&--left &__item:nth-child(2n-1) &__content { grid-column-start: 1; margin-left: auto; }
 
-		&__item:not(:last-child) &__image { margin-bottom: var(--gutter-y); }
+		// &__item:not(:last-child) &__image { margin-bottom: var(--gutter-y); }
+
+		@media (min-width: $screen_lg) {
+			&__item:not(:last-child) {
+			  margin-bottom: var(--gutter-y);
+			}
+		  }
 		
 		&__image {
 			&:before { bottom: calc(-1 * var(--gutter-y)); }
