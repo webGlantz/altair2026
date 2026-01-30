@@ -58,7 +58,7 @@ echo CONTENT_CLOSE;
 			
 					<div class="c_ac__content relative z-1 col-4 lg:col-6 lg:start-col-7 flex flex-col gap-24 self-center">
 						
-							<div  class="grid gap-12 lg:gap-24 lg:mb-24 max-w-500">
+							<div  class="grid gap-12 lg:gap-24 max-w-500">
 
 
 								<!-- eyebrow -->
