@@ -1,1 +1,1 @@
-.c_feed__filter{position:relative}.c_feed__filter:before{position:absolute;right:0;bottom:-14px;left:0;height:7px;background:currentColor;opacity:0;content:''}.c_feed__filter.is-active:before{opacity:1}.c_feed .loop-post{max-width:250px}
+.c_feed__filter{position:relative}.c_feed__filter:before{position:absolute;right:0;bottom:-14px;left:0;height:7px;background:currentColor;opacity:0;content:''}.c_feed__filter.is-active:before{opacity:1}.c_feed .loop-post{max-width:250px;margin:0 auto;min-width:250px}
