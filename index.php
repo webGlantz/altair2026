@@ -62,7 +62,7 @@ if (have_posts()) :
 						<a href="<?=get_post_type_archive_link('post')?>" class="c_feed__filter t_body t_body--sm <?=(!is_category() && !is_tag() && !is_search() && !is_author() ? 'is-active' :'')?>">All</a>
 						<?php if(!empty($filters)) :
 							foreach($filters as $cat) : 
-								if(!in_array($cat->term_id, $exclude)) : ?>
+								if ( ! in_array($cat->term_id, (array) $exclude, true) ) : ?>
 									<a href="<?=get_term_link($cat->term_id)?>" class="c_feed__filter t_body t_body--sm nowrap <?=(is_category($cat->term_id) ? 'is-active' : '')?>">
 										<?=$cat->name?>
 									</a>
