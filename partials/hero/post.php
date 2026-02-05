@@ -11,7 +11,7 @@ use glantz\core;
 
 $path = parse_url(get_post_type_archive_link($post->post_type))['path'];
 $archive = get_page_by_path($path);
-$exclude = get_field('exclude_category', $archive->ID);
+$exclude = get_field('exclude_category', $archive->ID) ?: [];
 $cats = get_the_terms($post->ID, 'category');
 $categories = wp_list_pluck($cats ?: [], 'name');
 $authors = get_field('authors');
