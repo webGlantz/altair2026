@@ -46,7 +46,7 @@ if (have_posts()) :
 				</div>
 
 				<div class="col-4 lg:col-7 lg:start-col-4 grid gap-48">
-					<div class="single-post__date t_label">Updated: <?=get_the_modified_date()?></div>
+					<div class="single-post__date t_label"><?=get_the_date()?></div>
 					<div class="t_wysiwyg t_body t_body--sm"><?=the_content()?></div>
 				</div>
 
