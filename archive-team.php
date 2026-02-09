@@ -29,6 +29,8 @@ $exclude = get_field('exclude_category', $archive->ID);
 
 $arcontent = $archive->post_content;
 
+$first_term_id = (!empty($filters) && !is_wp_error($filters)) ? (int) $filters[0]->term_id : 0;
+
 get_header();
 
 if (have_posts()) :
@@ -38,20 +40,18 @@ if (have_posts()) :
 		include locate_template('partials/hero/' . $hero['style'] . '.php', false, false);
 	endif; ?>
 
-	<section
-	id="feed"
-	class="c_feed relative z-1 grid my-48 lg:my-60 gap-48 lg:gap-60"
-	x-data="teamFeed()"
-	x-init="init()"
-	>
+<section
+  id="feed"
+  class="c_feed relative z-1 grid my-48 lg:my-60 gap-48 lg:gap-60"
+  x-data="teamFeed()"
+  x-init="active = <?= $first_term_id ?>; init()"
+>
 		<div class="c_feed__filters container layout-grid gap-24">
 			
 			<!-- filters -->
 			<div class="col-4 lg:col-12">
 				<div class="flex items-center justify-center gap-24 w-full border-b-2 border-blue-light pb-12">
-					
-					<button @click.prevent="active = 0" class="c_feed__filter t_body t_body--sm" :class="{ 'is-active' : active === 0 }">All</button>
-					<?php if(!empty($filters)) :
+						<?php if(!empty($filters)) :
 						foreach($filters as $cat) : ?>
 							<button @click.prevent="active = parseInt(<?=$cat->term_id?>)" href="<?=get_term_link($cat->term_id)?>" class="c_feed__filter t_body t_body--sm nowrap" :class="{ 'is-active' : active === parseInt(<?=$cat->term_id?>) }">
 								<?=$cat->name?>

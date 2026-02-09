@@ -82,7 +82,6 @@ function teamFeed() {
 		  requestAnimationFrame(() => {
 			if (window.AOS) AOS.refreshHard();
   
-			// footer logo: if it's already visible (common on short pages), force animate
 			const logo = document.querySelector('.f_logo[data-aos]');
 			if (!logo) return;
   
@@ -95,10 +94,7 @@ function teamFeed() {
 	  },
   
 	  init() {
-		// initial
 		this.refreshAOS();
-  
-		// on filter change
 		this.$watch('active', () => this.refreshAOS());
 	  },
 	};

@@ -10,6 +10,7 @@
 use glantz\core; 
 
 $position = get_field('position');
+$title = get_field('other_title');
 
 $contact = array(
 	'phone'=>get_field('phone'),
@@ -46,6 +47,8 @@ $contact = array_filter($contact, fn($_, $key) => !empty($contact[$key]), ARRAY_
 		<div class="hero-top hero_interior__top hero_team__top relative col-4 lg:col-7 lg:start-col-6 grid gap-12">
 			<!-- name -->
 			<h1><?=(isset($hero['headline']) ? $hero['headline'] : get_the_title())?></h1>	
+			<span class="t_h3"> <?=$title?></span>
+
 
 			<?php if(!empty($position)) : ?>
 				<!-- position -->
