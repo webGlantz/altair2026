@@ -53,5 +53,18 @@
 	}
 }
 
+.single-team {
+	.c_blog__headline {
+		font-size: 30px;
+		font-weight: 300;
+		line-height: 1.05;
+		letter-spacing: 0.02em;
+	
+		@media (min-width: $screen_lg) {
+			font-size: 40px;
+		}
+	}
+}
+
 body { background: var(--white); }
 .h { background: var(--blue-lightest); }
