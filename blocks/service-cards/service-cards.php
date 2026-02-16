@@ -40,7 +40,9 @@ echo CONTENT_CLOSE;
 
 
 		<?php if($fields['cards']) : ?>
-			<div class="c_service-cards__grid relative layout-grid gap-0 text-center text-white">
+			<div class="c_service-cards__grid relative layout-grid gap-0 text-center text-white" 
+			data-aos="fade-right"
+			data-aos-duration="1000">
 				<?php foreach($fields['cards'] as $c) : ?>
 					<a href="<?=$c['link']['url']?>" @mouseenter="hover = true" @mouseleave="hover = false" class="c_service-card relative z-1 col-4 lg:col-4 flex items-center ar-1:1 lg:ar-4:7 py-72 px-60 lg:px-24 xl:px-72 group overflow-hidden" target="<?=$c['link']['target']?>" x-data="serviceCard" x-resize.document="size = $width;">
 

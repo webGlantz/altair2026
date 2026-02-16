@@ -12,7 +12,7 @@ $links = glantz\core::get_nav('footer-utility');
 
 <div class="f_utility py-8 bg-blue-light t_body t_body--xs font-semibold">
 	<div class="container lg:flex items-center gap-8">
-		<span class="lg:mr-auto">&copy; <?=date('Y')?> <?=get_bloginfo('site')?>. All rights reserved.</span>
+		<span class="lg:mr-auto">&copy; <?=date('Y')?> Altair Advisers. All rights reserved.</span>
 
 		<?php foreach($links as $index=>$link) : ?>
 			<a href="<?=$link['url']?>" class="underline" target="<?=$link['target']?>"><?=$link['title']?></a>

@@ -42,7 +42,7 @@ use glantz\core;
 
 
 		<!-- media -->	
-		<div class="hero_home__media relative z-1 ar-1:1 lg:ar-16:9" x-data="{
+		<div class="hero_home__media relative z-1 ar-1:1 lg:ar-16:9 " data-aos="zoom-in-up" data-aos-duration="1000" x-data="{
 			state: 'playing',
 
 			init() {
