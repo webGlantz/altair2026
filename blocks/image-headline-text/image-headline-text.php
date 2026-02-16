@@ -16,6 +16,8 @@ echo CONTENT_CLOSE;
 
 ?>
 
+?>
+
 <!-- component: image + headline + text -->
 <section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_ac relative z-1 c_ac--<?=$fields['layout']?>">
 
@@ -36,10 +38,13 @@ echo CONTENT_CLOSE;
 		</div>
 
 		<div class="grid gap-48 lg:gap-0">
-			<?php foreach($fields['items'] as $index=>$i) : ?>
-
+			<?php foreach($fields['items'] as $index=>$i) : 
+				$aos = ($index % 2 === 1)
+				? 'data-aos="fade-right" data-aos-duration="1000"'
+				: 'data-aos="fade-left" data-aos-duration="1000"';
+				?>
 				<!-- item -->
-				<div id="<?=$i['anchor_id']?>" class="c_ac__item layout-grid gap-24 lg:gap-48" style="--bg: var(--<?=$i['color']?>">
+				<div id="<?=$i['anchor_id']?>" class="c_ac__item layout-grid gap-24 lg:gap-48" style="--bg: var(--<?=$i['color']?>" <?=$aos?>>
 
 					<!-- image -->
 					<div class="c_ac__image relative z-1 col-4 lg:col-6 ar-5:4">
