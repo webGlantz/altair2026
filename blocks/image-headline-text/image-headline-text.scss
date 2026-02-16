@@ -1,6 +1,7 @@
 @import '../../assets/scss/foundation/_variables.scss';
 
 .c_ac {
+	overflow: clip; 
 
 	&__item {
 		@media (min-width: $screen_lg) {
@@ -43,7 +44,6 @@
 		&--right &__item:nth-child(2n) &__content,
 		&--left &__item:nth-child(2n-1) &__content { grid-column-start: 1; margin-left: auto; }
 
-		// &__item:not(:last-child) &__image { margin-bottom: var(--gutter-y); }
 
 		@media (min-width: $screen_lg) {
 			&__item:not(:last-child) {
