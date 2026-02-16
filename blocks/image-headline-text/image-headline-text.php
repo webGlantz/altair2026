@@ -16,7 +16,6 @@ echo CONTENT_CLOSE;
 
 ?>
 
-?>
 
 <!-- component: image + headline + text -->
 <section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_ac relative z-1 c_ac--<?=$fields['layout']?>">
