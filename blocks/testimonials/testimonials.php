@@ -32,7 +32,7 @@ echo CONTENT_CLOSE;
 ?>
 
 <!-- component: testimonials -->
-<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_testimonials relative z-1">
+<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_testimonials relative z-1" data-aos="fade-up" data-aos-duration="1000">
 
 	<div class="c_testimonials__container container ">
 		

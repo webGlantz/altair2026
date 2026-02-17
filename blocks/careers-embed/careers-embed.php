@@ -17,7 +17,7 @@ echo CONTENT_CLOSE;
 ?>
 
 <!-- component: careers embed -->
-<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_embed relative z-1 grid gap-48 lg:gap-60 bg-grey">
+<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_embed relative z-1 grid gap-48 lg:gap-60 bg-grey" data-aos="fade-up" data-aos-duration="1000">
 
 
 	<div class="c_embed__container container container--xs grid gap-12 lg:gap-24  text-center">

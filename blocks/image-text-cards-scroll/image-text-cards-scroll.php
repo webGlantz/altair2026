@@ -13,7 +13,7 @@ $fields = get_fields();
 echo CONTENT_CLOSE; ?>
 
 <!-- component: image-text-cards-scroll  -->
-<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_cards-scroll relative z-1 grid gap-48 lg:gap-72"x-data="timeline">
+<section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_cards-scroll relative z-1 grid gap-48 lg:gap-72"x-data="timeline" data-aos="fade-up" data-aos-duration="1000">
 
 	<div class="c_cards-scroll__container container ">
 		
