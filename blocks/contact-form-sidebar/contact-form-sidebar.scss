@@ -24,7 +24,11 @@
 		}
 	}
 
-	@media (max-width: #{$screen_lg - 1)}) {
+	@media (max-width: #{$screen_lg - 1}) {
 		&__info { order: 999; }
+		textarea {
+			min-height: 0 !important;
+			height: 100px !important;
+		}
 	}
 }

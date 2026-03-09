@@ -24,7 +24,7 @@ echo CONTENT_CLOSE;
 <!-- component: contact form + sidebar -->
 <section id="<?=(!empty($block['anchor']) ? $block['anchor'] : $block['id'])?>" class="component c_form relative z-1">
 
-	<div class="c_form__container container layout-grid gap-24 lg:gap-48">
+	<div class="c_form__container container layout-grid gap-96 lg:gap-48">
 
 			
 		<!-- contact information -->
