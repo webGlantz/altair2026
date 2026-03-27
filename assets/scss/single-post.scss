@@ -52,4 +52,9 @@ body { background: var(--white); }
 	margin-bottom: 0;
 	padding-top: 48px;
 	padding-bottom: 48px;
+
+	.t_wysiwyg {
+		min-width: 0;
+		overflow-wrap: break-word;
+	  }
 }
