@@ -189,6 +189,48 @@
                     "bidirectional_target": []
                 }
             ]
+        },
+        {
+            "key": "field_69e668bbdead7",
+            "label": "Words on Wealth Disclosures Text",
+            "name": "words_on_wealth_disclosures_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_69e668d9dead8",
+            "label": "Market Commentary Disclosures Text",
+            "name": "market_commentary_disclosures_text",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         }
     ],
     "location": [
@@ -210,5 +252,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1760465915
+    "modified": 1776708179
 }
