@@ -55,7 +55,7 @@
 
     <?php if(!empty($client_login) && !empty($client_login['url'])) : ?>
     <!-- client login -->
-    <li class="h_nav__utility-i">
+    <li class="h_nav__utility-i pb-12">
         <a href="<?=$client_login['url']?>" class="h_nav__utility-i hover:underline lg:font-bold"
             target="<?=$client_login['target']?>">
             <?=$client_login['title']?>
@@ -65,7 +65,7 @@
 
 
     <?php if(!empty($disclosures) && !empty($disclosures['url'])) : ?>
-    <!-- client login -->
+    <!-- disclosures -->
     <li class="h_nav__utility-i">
         <a href="<?=$disclosures['url']?>" class="h_nav__utility-i hover:underline lg:font-bold"
             target="<?=$disclosures['target']?>">
