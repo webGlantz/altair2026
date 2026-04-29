@@ -57,4 +57,13 @@ body { background: var(--white); }
 		min-width: 0;
 		overflow-wrap: break-word;
 	  }
+
+	  .single-post__disclosure {
+		border-top: 2px solid var(--blue-light);
+
+		a {
+			font-weight: 700;
+			text-decoration: underline;
+		}
+	  }
 }
